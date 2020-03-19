@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Search"></activity>
         <activity android:name=".ForgotPassword"></activity>
         <activity android:name=".SignUp" />
         <activity android:name=".Myprofile" />
@@ -32,7 +33,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".PurchaseConfirmation">
+
+        </activity>
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".ShippingDetails"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
