@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">MADMiniProject</string>
 
-
     <string name="eHanger">eHanger</string>
     <string name="logintxt">Log in to your Account</string>
     <string name="userName">User Name</string>
@@ -33,4 +32,37 @@
     <string name="send">Send</string>
 
 
+
+    <string name="cont">Continue Shopping</string>
+    <string name="pro">Proceed To Checkout</string>
+    <string name="Title">e`Hanger</string>
+    <string name="des1">
+        Rs. 1600.00 \ Blue blouse \ Color:dark-blue \Size: M \ Quantity:1</string>
+    <string name="des2">
+        Rs.2550.00 \ Formal Shirt \     \    \   \ Color: brown \ Size: L \ Quantity:2</string>
+    <string name="des3">
+        Rs. 1050.00 \ Hoop Earrings\ Quantity:1</string>
+    <string name="eb">Edit</string>
+    <string name="db">Delete</string>
+    <string name="first">Shopping Cart</string>
+    <string name="second">Update Cart</string>
+    <string name="fde">Rs. 1600.00 \ Blue blouse</string>
+    <string name="size">Size</string>
+    <string name="color">Color</string>
+    <string name="quantity">Quantity</string>
+    <string name="ub">Update</string>
+    <string name="third">Order Summary</string>
+    <string name="sdes1">Rs. 1600.00 \ Blue blouse</string>
+    <string name="sdes2">Rs.2550.00 \ Formal Shirt</string>
+    <string name="sdes3">Rs. 1050.00 \ Hoop Earrings</string>
+    <string name="total">Total</string>
+    <string name="gtotal">Grand Total</string>
+    <string name="pur">Purchase</string>
+    <string name="cancel">Cancel</string>
+    <string name="q1">1</string>
+    <string name="q2">2</string>
+    <string name="bptot">Rs.1600.00</string>
+    <string name="fmtot">Rs.5100.00</string>
+    <string name="hrtot">Rs.1050.00</string>
+    <string name="ggtot">Rs.7750.00</string>
 </resources>
