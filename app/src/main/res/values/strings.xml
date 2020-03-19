@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">MADMiniProject</string>
+    <string name="shipping_details">Shipping Details</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="string_last_name" />
+    <string name="email">Email Address</string>
+    <string name="address">Address</string>
+    <string name="country">Country</string>
+    <string name="postalc">Postal Code</string>
+    <string name="tpno">Telephone No</string>
+    <string name="shippingdetbtn">Shipping Details</string>
+    <string name="save">Save and Continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="shopname">éHanger</string>
+    <string name="paymentdet">Payment Details</string>
+    <string name="cardty">Card Type</string>
+    <string name="cardno">Card Number</string>
+    <string name="fullnm">Full Name</string>
+    <string name="expdate">Expiration Date</string>
+    <string name="seccode">Security Code</string>
+    <string name="billdets">Billing Details</string>
+    <string name="editb">Edit Billing Details</string>
+    <string name="done">Done</string>
+    <string name="credc">Credit Card</string>
+    <string name="debc">Debit Card</string>
+    <string name="cofp">Confirm and Pay</string>
+    <string name="purchconf">Purchase Confirmation</string>
+    <string name="total">Order Total</string>
+    <string name="priceord">Rs. 5400.00</string>
+    <string name="search">Search</string>
+    <string name="crownring">Crown Ring</string>
+    <string name="viewd">View Details</string>
+    <string name="dring">Diamond Ring</string>
+    <string name="delete">Delete Order</string>
 </resources>
