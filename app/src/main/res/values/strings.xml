@@ -1,5 +1,38 @@
 <resources>
     <string name="app_name">MADMiniProject</string>
+
+    <string name="eHanger">eHanger</string>
+    <string name="logintxt">Log in to your Account</string>
+    <string name="userName">User Name</string>
+    <string name="button1">Log in</string>
+    <string name="button2">Sign up</string>
+    <string name="forgotemail">Forgot Password ?</string>
+
+
+    <string name="password">Password</string>
+    <string name="profile" />
+
+    <string name="telephone">Telephone</string>
+    <string name="address">Address</string>
+    <string name="Update">Update</string>
+    <string name="button">Button</string>
+    <string name="email">Email</string>
+    <string name="delete">Delete</string>
+
+    <string name="img" />
+    <string name="user_name">User Name</string>
+    <string name="signup">Create your own Account</string>
+    <string name="signuptxt">Create your own Account</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="myprofiletxt">My Profile</string>
+    <string name="img2" />
+    <string name="passwordtxt">Forgot Password</string>
+    <string name="passwordtxt2">Enter your email address below and we will send you an email with instruction to how change your password</string>
+    <string name="send">Send</string>
+
+
+
     <string name="cont">Continue Shopping</string>
     <string name="pro">Proceed To Checkout</string>
     <string name="Title">e`Hanger</string>
