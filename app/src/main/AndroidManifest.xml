@@ -9,6 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Search"></activity>
+        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".SignUp" />
+        <activity android:name=".Myprofile" />
+        <activity android:name=".Login" />
+        <activity android:name=".OrderSummary"></activity>
+        <activity android:name=".UpdateCart" />
+        <activity android:name=".ShopingCart">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".UpdateDelate"></activity>
         <activity android:name=".AddItem" />
         <activity android:name=".ItemDetails" />
@@ -19,7 +33,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".PurchaseConfirmation">
+
+        </activity>
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".ShippingDetails"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

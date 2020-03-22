@@ -24,4 +24,102 @@
     <string name="upload_a_file">Upload a file</string>
     <string name="add_item">Add Item</string>
     <string name="date">dd/mm/yyyy</string>
+    <string name="shipping_details">Shipping Details</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="string_last_name" />
+    <string name="email">Email Address</string>
+    <string name="address">Address</string>
+    <string name="country">Country</string>
+    <string name="postalc">Postal Code</string>
+    <string name="tpno">Telephone No</string>
+    <string name="shippingdetbtn">Shipping Details</string>
+    <string name="save">Save and Continue</string>
+    <string name="cancel">Cancel</string>
+    <string name="shopname">éHanger</string>
+    <string name="paymentdet">Payment Details</string>
+    <string name="cardty">Card Type</string>
+    <string name="cardno">Card Number</string>
+    <string name="fullnm">Full Name</string>
+    <string name="expdate">Expiration Date</string>
+    <string name="seccode">Security Code</string>
+    <string name="billdets">Billing Details</string>
+    <string name="editb">Edit Billing Details</string>
+    <string name="done">Done</string>
+    <string name="credc">Credit Card</string>
+    <string name="debc">Debit Card</string>
+    <string name="cofp">Confirm and Pay</string>
+    <string name="purchconf">Purchase Confirmation</string>
+    <string name="total">Order Total</string>
+    <string name="priceord">Rs. 5400.00</string>
+    <string name="search">Search</string>
+    <string name="crownring">Crown Ring</string>
+    <string name="viewd">View Details</string>
+    <string name="dring">Diamond Ring</string>
+    <string name="delete">Delete Order</string>
+    <string name="eHanger">eHanger</string>
+    <string name="logintxt">Log in to your Account</string>
+    <string name="userName">User Name</string>
+    <string name="button1">Log in</string>
+    <string name="button2">Sign up</string>
+    <string name="forgotemail">Forgot Password ?</string>
+
+
+    <string name="password">Password</string>
+    <string name="profile" />
+
+    <string name="telephone">Telephone</string>
+    <string name="address">Address</string>
+    <string name="Update">Update</string>
+    <string name="button">Button</string>
+    <string name="email">Email</string>
+    <string name="delete">Delete</string>
+
+    <string name="img" />
+    <string name="user_name">User Name</string>
+    <string name="signup">Create your own Account</string>
+    <string name="signuptxt">Create your own Account</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
+    <string name="myprofiletxt">My Profile</string>
+    <string name="img2" />
+    <string name="passwordtxt">Forgot Password</string>
+    <string name="passwordtxt2">Enter your email address below and we will send you an email with instruction to how change your password</string>
+    <string name="send">Send</string>
+
+
+
+    <string name="cont">Continue Shopping</string>
+    <string name="pro">Proceed To Checkout</string>
+    <string name="Title">e`Hanger</string>
+    <string name="des1">
+        Rs. 1600.00 \ Blue blouse \ Color:dark-blue \Size: M \ Quantity:1</string>
+    <string name="des2">
+        Rs.2550.00 \ Formal Shirt \     \    \   \ Color: brown \ Size: L \ Quantity:2</string>
+    <string name="des3">
+        Rs. 1050.00 \ Hoop Earrings\ Quantity:1</string>
+    <string name="eb">Edit</string>
+    <string name="db">Delete</string>
+    <string name="first">Shopping Cart</string>
+    <string name="second">Update Cart</string>
+    <string name="fde">Rs. 1600.00 \ Blue blouse</string>
+    <string name="size">Size</string>
+    <string name="color">Color</string>
+    <string name="quantity">Quantity</string>
+    <string name="ub">Update</string>
+    <string name="third">Order Summary</string>
+    <string name="sdes1">Rs. 1600.00 \ Blue blouse</string>
+    <string name="sdes2">Rs.2550.00 \ Formal Shirt</string>
+    <string name="sdes3">Rs. 1050.00 \ Hoop Earrings</string>
+    <string name="total">Total</string>
+    <string name="gtotal">Grand Total</string>
+    <string name="pur">Purchase</string>
+    <string name="cancel">Cancel</string>
+    <string name="q1">1</string>
+    <string name="q2">2</string>
+    <string name="bptot">Rs.1600.00</string>
+    <string name="fmtot">Rs.5100.00</string>
+    <string name="hrtot">Rs.1050.00</string>
+    <string name="ggtot">Rs.7750.00</string>
+
 </resources>
