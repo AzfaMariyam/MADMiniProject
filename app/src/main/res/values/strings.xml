@@ -1,10 +1,34 @@
 <resources>
     <string name="app_name">MADMiniProject</string>
+    <string name="name">éHanger</string>
+    <string name="admin">DASHBOARD</string>
+    <string name="update">Update</string>
+    <string name="idelete">Delete</string>
+    <string name="code">Code</string>
+    <string name="item">Name</string>
+    <string name="action">Action</string>
+    <string name="update_delete">Update/ Delete an item</string>
+    <string name="shop_now">SHOP NOw</string>
+    <string name="girl_power_collection">Girl Power Collection</string>
+    <string name="women">WOMEN\'S</string>
+    <string name="description">Our hoodies are known for their exceptionally soft fleece and comfortable fit. Matching sweatpant available. Regular Fit. 68% cotton, 32% polyester.</string>
+    <string name="price">Rs.2000.00</string>
+    <string name="iname">Pink Sweatshirt</string>
+    <string name="size">Size</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="insert">Insert an item</string>
+    <string name="color">Color code</string>
+    <string name="quantity">Quantity</string>
+    <string name="iprice">Price</string>
+    <string name="idescription">Description</string>
+    <string name="upload_a_file">Upload a file</string>
+    <string name="add_item">Add Item</string>
+    <string name="date">dd/mm/yyyy</string>
     <string name="shipping_details">Shipping Details</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="string_last_name" />
-    <string name="email">Email Address</string>
+
     <string name="address">Address</string>
     <string name="country">Country</string>
     <string name="postalc">Postal Code</string>
@@ -26,7 +50,7 @@
     <string name="debc">Debit Card</string>
     <string name="cofp">Confirm and Pay</string>
     <string name="purchconf">Purchase Confirmation</string>
-    <string name="total">Order Total</string>
+    <string name="total">Total</string>
     <string name="priceord">Rs. 5400.00</string>
     <string name="search">Search</string>
     <string name="crownring">Crown Ring</string>
@@ -45,11 +69,11 @@
     <string name="profile" />
 
     <string name="telephone">Telephone</string>
-    <string name="address">Address</string>
+
     <string name="Update">Update</string>
     <string name="button">Button</string>
     <string name="email">Email</string>
-    <string name="delete">Delete</string>
+
 
     <string name="img" />
     <string name="user_name">User Name</string>
@@ -79,18 +103,18 @@
     <string name="first">Shopping Cart</string>
     <string name="second">Update Cart</string>
     <string name="fde">Rs. 1600.00 \ Blue blouse</string>
-    <string name="size">Size</string>
-    <string name="color">Color</string>
-    <string name="quantity">Quantity</string>
+
+
+
     <string name="ub">Update</string>
     <string name="third">Order Summary</string>
     <string name="sdes1">Rs. 1600.00 \ Blue blouse</string>
     <string name="sdes2">Rs.2550.00 \ Formal Shirt</string>
     <string name="sdes3">Rs. 1050.00 \ Hoop Earrings</string>
-    <string name="total">Total</string>
+
     <string name="gtotal">Grand Total</string>
     <string name="pur">Purchase</string>
-    <string name="cancel">Cancel</string>
+
     <string name="q1">1</string>
     <string name="q2">2</string>
     <string name="bptot">Rs.1600.00</string>
