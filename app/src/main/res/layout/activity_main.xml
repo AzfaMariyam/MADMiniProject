@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".MainActivity"/>
-=======
+
     tools:context=".MainActivity">
+
+
 
     <SearchView
         android:id="@+id/searchView"
@@ -153,4 +153,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.613" />
 </androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> 70444d4abc9655564741440bd8e6918056a91392
+
