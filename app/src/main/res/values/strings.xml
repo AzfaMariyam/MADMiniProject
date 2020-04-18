@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MADMiniProject</string>
     <string name="name">éHanger</string>
     <string name="admin">DASHBOARD</string>
@@ -105,7 +105,7 @@
     <string name="fde">Rs. 1600.00 \ Blue blouse</string>
 
 
-
+    <string name="color" tools:ignore="DuplicateDefinition">Color</string>
     <string name="ub">Update</string>
     <string name="third">Order Summary</string>
     <string name="sdes1">Rs. 1600.00 \ Blue blouse</string>
