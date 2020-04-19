@@ -88,6 +88,7 @@
     <string name="send">Send</string>
 
 
+
     <string name="cont">Continue Shopping</string>
     <string name="pro">Proceed To Checkout</string>
     <string name="Title">e`Hanger</string>
@@ -103,7 +104,7 @@
     <string name="second">Update Cart</string>
     <string name="fde">Rs. 1600.00 \ Blue blouse</string>
 
-    <!--string name="color">Color</string-->
+    <string name="color">Color</string>
 
     <string name="ub">Update</string>
     <string name="third">Order Summary</string>
@@ -121,26 +122,17 @@
     <string name="hrtot">Rs.1050.00</string>
     <string name="ggtot">Rs.7750.00</string>
     <string name="addpromo">Add Promotions</string>
-    <string name="imageButton16" />
-    <string name="imageButton17" />
-    <string name="promo2">Promotions</string>
-    <string name="deletePromo">Delete/Update Promotion</string>
+    <string name="promo">Promotions</string>
+    <string name="promodep">Promotion Description</string>
+    <string name="catg">Categories</string>
+    <string name="promocode">Promo Code</string>
+    <string name="subpromo">Add</string>
+    <string name="deletepromo">Delete /Update promotions</string>
     <string name="code1">Code</string>
     <string name="category1">Categories</string>
-    <!--string name="action">Action</string>
-    <string name="code">Code</string-->
-    <string name="categories">Categories</string>
-    <string name="deletepromo">Delete</string>
-    <string name="updatepromo">Update</string>
     <string name="action1">Action</string>
-    <string name="useremail">Email/User Name</string>
-    <string name="cpass">Confirm Password</string>
-    <string name="promotion_description">Promotion Description</string>
-    <string name="promo_code">Promo Code</string>
-    <string name="add">ADD</string>
-    <!--string name="categories">Categories</string-->
-    <string name="todo" />
-    <string name="promotions" />
-    <!--string name="user_name">User Name</string-->
+    <string name="deletepromo2">Delete</string>
+    <string name="updatepromo">Update</string>
+    <string name="confrim_password">Confrim Password</string>
 
 </resources>

@@ -37,7 +37,7 @@
             android:id="@+id/deletepromo2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/deletePromo"
+            android:text="@string/deletepromo"
             android:textColor="@android:color/widget_edittext_dark"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
             android:id="@+id/promo2"
             android:layout_width="157dp"
             android:layout_height="50dp"
-            android:text="@string/promo2"
+            android:text="@string/promo"
             android:textColor="?android:attr/colorForeground"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +89,7 @@
             android:id="@+id/category1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/categories"
+            android:text="@string/category1"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -118,7 +118,7 @@
             android:layout_width="59dp"
             android:layout_height="33dp"
             android:background="@android:color/holo_red_dark"
-            android:text="@string/deletepromo"
+            android:text="@string/deletepromo2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.897"
@@ -156,6 +156,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037"
-        app:srcCompat="@drawable/menu"
-        android:contentDescription="@string/imageButton17" />
+        app:srcCompat="@drawable/menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
