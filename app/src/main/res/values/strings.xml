@@ -8,6 +8,12 @@
     <string name="item">Name</string>
     <string name="action">Action</string>
     <string name="update_delete">Update/ Delete an item</string>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Excel</item>
+    </string-array>
     <string name="shop_now">SHOP NOw</string>
     <string name="girl_power_collection">Girl Power Collection</string>
     <string name="women">WOMEN\'S</string>
@@ -17,7 +23,7 @@
     <string name="size">Size</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="insert">Insert an item</string>
-    <string name="color">Color code</string>
+    <string name="colorC">Color code</string>
     <string name="quantity">Quantity</string>
     <string name="iprice">Price</string>
     <string name="idescription">Description</string>
@@ -121,5 +127,6 @@
     <string name="fmtot">Rs.5100.00</string>
     <string name="hrtot">Rs.1050.00</string>
     <string name="ggtot">Rs.7750.00</string>
+    <string name="dashboard">DASHBOARD</string>
 
 </resources>
