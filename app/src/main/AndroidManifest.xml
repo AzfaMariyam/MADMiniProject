@@ -4,38 +4,43 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Search"/>
-        <activity android:name=".ForgotPassword"/>
-        <activity android:name=".SignUp" />
-        <activity android:name=".Myprofile" />
-        <activity android:name=".Login" />
-        <activity android:name=".OrderSummary"/>
-        <activity android:name=".UpdateCart" />
-        <activity android:name=".ShopingCart">
+        <activity android:name=".deletePromo">
 
         </activity>
-        <activity android:name=".UpdateDelate"/>
+        <activity android:name=".AddPromo" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+        <activity android:name=".Search" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".SignUp" />
+
+        <activity android:name=".Myprofile" />
+        <activity android:name=".Login" />
+
+
+        <activity android:name=".OrderSummary" />
+        <activity android:name=".UpdateCart" />
+        <activity android:name=".ShopingCart" />
+        <activity android:name=".UpdateDelate" />
         <activity android:name=".AddItem" />
         <activity android:name=".ItemDetails" />
         <activity android:name=".itemDisplay" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-        <activity android:name=".PurchaseConfirmation">
-
-        </activity>
+        <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".ShippingDetails"/>
+        <activity android:name=".ShippingDetails" />
 
         <meta-data
             android:name="preloaded_fonts"
