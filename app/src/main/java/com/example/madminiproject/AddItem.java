@@ -8,14 +8,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.example.madminiproject.Database.DBHandler;
+
 public class AddItem extends AppCompatActivity {
     EditText code, date, name, price, description, quantity, color;
     Button addItem, addImg;
+    Spinner spinnerS;
+
+    DBHandler myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
+
+        myDB = new DBHandler(this);
 
         code = findViewById(R.id.editText4);
         date = findViewById(R.id.editText6);
@@ -28,10 +35,13 @@ public class AddItem extends AppCompatActivity {
         addItem = findViewById(R.id.button2);
         addImg = findViewById(R.id.button3);
 
-        Spinner spinnerS  = (Spinner) findViewById(R.id.spinner);
+        spinnerS  = findViewById(R.id.spinner);
 
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(AddItem.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.sizes));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerS.setAdapter(myAdapter);
+
+
+
     }
 }
