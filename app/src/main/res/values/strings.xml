@@ -121,5 +121,18 @@
     <string name="fmtot">Rs.5100.00</string>
     <string name="hrtot">Rs.1050.00</string>
     <string name="ggtot">Rs.7750.00</string>
+    <string name="addpromo">Add Promotions</string>
+    <string name="promo">Promotions</string>
+    <string name="promodep">Promotion Description</string>
+    <string name="catg">Categories</string>
+    <string name="promocode">Promo Code</string>
+    <string name="subpromo">Add</string>
+    <string name="deletepromo">Delete /Update promotions</string>
+    <string name="code1">Code</string>
+    <string name="category1">Categories</string>
+    <string name="action1">Action</string>
+    <string name="deletepromo2">Delete</string>
+    <string name="updatepromo">Update</string>
+    <string name="confrim_password">Confrim Password</string>
 
 </resources>

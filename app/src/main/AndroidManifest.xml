@@ -11,7 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Search"/>
         <activity android:name=".ForgotPassword"/>
-        <activity android:name=".SignUp" />
+        <activity android:name=".SignUp" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+    </activity>
         <activity android:name=".Myprofile" />
         <activity android:name=".Login" />
         <activity android:name=".OrderSummary"/>
@@ -23,18 +30,14 @@
         <activity android:name=".AddItem" />
         <activity android:name=".ItemDetails" />
         <activity android:name=".itemDisplay" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
         <activity android:name=".PurchaseConfirmation">
 
         </activity>
         <activity android:name=".PaymentDetails" />
+        <activity android:name=".AddPromo" />
+        <activity android:name=".deletePromo" />
         <activity android:name=".ShippingDetails"/>
 
         <meta-data
