@@ -146,6 +146,8 @@
     <string name="updatepromo">Update</string>
     <string name="confrim_password">Confrim Password</string>
     <string name="viewall">View All</string>
+    <string name="shipupdate">Update Shipping Details</string>
+    <string name="deleteship">Delete Details</string>
 
 
 </resources>
