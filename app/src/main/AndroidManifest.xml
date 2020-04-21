@@ -11,14 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Search"/>
         <activity android:name=".ForgotPassword"/>
-        <activity android:name=".SignUp" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SignUp" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
 
-    </activity>
         <activity android:name=".Myprofile" />
         <activity android:name=".Login" />
         <activity android:name=".OrderSummary"/>
@@ -36,7 +31,15 @@
 
         </activity>
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".AddPromo" />
+        <activity android:name=".AddPromo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
         <activity android:name=".deletePromo" />
         <activity android:name=".ShippingDetails"/>
 

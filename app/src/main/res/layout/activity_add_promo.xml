@@ -61,7 +61,7 @@
         android:ems="10"
         android:hint="@string/promodep"
         android:importantForAutofill="no"
-        android:inputType="textMultiLine|textPersonName|textImeMultiLine|numberPassword"
+        android:inputType="textMultiLine|textPersonName|textImeMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -119,10 +119,10 @@
         android:text="@string/subpromo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.198"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94" />
+        app:layout_constraintVertical_bias="0.933" />
 
     <EditText
         android:id="@+id/catg"
@@ -138,4 +138,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.575" />
+
+    <Button
+        android:id="@+id/viewall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/viewall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toEndOf="@+id/submitpromo"
+        app:layout_constraintTop_toBottomOf="@+id/code"
+        app:layout_constraintVertical_bias="0.568" />
 </androidx.constraintlayout.widget.ConstraintLayout>
