@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rmbackground"
     tools:context=".UpdateCart">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/textView7"
@@ -35,18 +47,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03"
         app:srcCompat="@drawable/shoppingcart" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
     <ImageButton
         android:id="@+id/imageButton4"
@@ -106,7 +106,7 @@
         app:layout_constraintVertical_bias="0.337" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/email"
         android:layout_width="295dp"
         android:layout_height="53dp"
         android:ems="10"
@@ -121,12 +121,12 @@
         app:layout_constraintVertical_bias="0.665" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/telno"
         android:layout_width="295dp"
         android:layout_height="53dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/color"
+        android:text="@string/colort"
         android:textColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +136,7 @@
         app:layout_constraintVertical_bias="0.768" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/firstname"
         android:layout_width="295dp"
         android:layout_height="53dp"
         android:ems="10"
