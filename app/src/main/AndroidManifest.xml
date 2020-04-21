@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".itemAdmin"></activity>
+        <activity android:name=".itemAdmin"/>
         <activity android:name=".Search" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
@@ -18,7 +18,7 @@
         <activity android:name=".OrderSummary" />
         <activity android:name=".UpdateCart" />
         <activity android:name=".ShopingCart"></activity>
-        <activity android:name=".UpdateDelate" />
+        <activity android:name=".UpdateDeleteItem" />
         <activity android:name=".AddItem" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,10 +30,10 @@
         <activity android:name=".itemDisplay" />
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
-<!--        <activity android:name=".ShippingDetails" />-->
-<!--        <activity android:name=".MainActivity">-->
+        <activity android:name=".ShippingDetails" />
+        <activity android:name=".MainActivity">
 
-<!--        </activity>-->
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
