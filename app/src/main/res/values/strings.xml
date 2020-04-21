@@ -134,5 +134,6 @@
     <string name="deletepromo2">Delete</string>
     <string name="updatepromo">Update</string>
     <string name="confrim_password">Confrim Password</string>
+    <string name="viewall">View All</string>
 
 </resources>
