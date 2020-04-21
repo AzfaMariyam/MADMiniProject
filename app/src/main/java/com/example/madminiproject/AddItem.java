@@ -3,36 +3,35 @@ package com.example.madminiproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-
-import com.example.madminiproject.Database.DBHandler;
+import android.widget.TextView;
 
 public class AddItem extends AppCompatActivity {
-    EditText code, date, name, price, description, quantity, color;
-    Button addItem, addImg;
+
+    private TextView code, date, name, price, description, quantity, color;
+    private Button addItem, addImg;
     Spinner spinnerS;
 
-    DBHandler myDB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
-        myDB = new DBHandler(this);
+        code = (EditText) findViewById(R.id.editText4);
+        date = (EditText) findViewById(R.id.editText6);
+        name = (EditText) findViewById(R.id.editText);
+        price = (EditText) findViewById(R.id.editText3);
+        description = (EditText) findViewById(R.id.editText5);
+        color = (EditText) findViewById(R.id.editText1);
+        quantity = (EditText) findViewById(R.id.editText8);
 
-        code = findViewById(R.id.editText4);
-        date = findViewById(R.id.editText6);
-        name = findViewById(R.id.editText);
-        price = findViewById(R.id.editText3);
-        description = findViewById(R.id.editText5);
-        color = findViewById(R.id.editText1);
-        quantity = findViewById(R.id.editText8);
-
-        addItem = findViewById(R.id.button2);
+        addItem = (Button) findViewById(R.id.button2);
         addImg = findViewById(R.id.button3);
 
         spinnerS  = findViewById(R.id.spinner);
@@ -41,7 +40,14 @@ public class AddItem extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerS.setAdapter(myAdapter);
 
+        addItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+
+            }
+        });
 
     }
+
 }
