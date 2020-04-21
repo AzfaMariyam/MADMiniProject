@@ -25,20 +25,21 @@
         <activity android:name=".AddItem" />
         <activity android:name=".ItemDetails" />
         <activity android:name=".itemDisplay" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+    </activity>
 
         <activity android:name=".PurchaseConfirmation">
 
         </activity>
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".AddPromo" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".AddPromo"/> >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
 
         <activity android:name=".deletePromo" />
         <activity android:name=".ShippingDetails"/>
