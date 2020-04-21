@@ -13,6 +13,7 @@ public class ShippingDetHandler extends SQLiteOpenHelper {
     public static final String Database_NAME = "ShippingDetailstable";
 
     public ShippingDetHandler(@Nullable Context context) {
+
         super(context, Database_NAME, null, 1);
     }
 
@@ -27,6 +28,10 @@ public class ShippingDetHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onUpgrade(db, oldVersion, newVersion);
+    }
+
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + ShippingTable.ship.TABLE_NAME + " (" +
                     ShippingTable.ship._ID + " INTEGER PRIMARY KEY ," +
@@ -37,6 +42,8 @@ public class ShippingDetHandler extends SQLiteOpenHelper {
                     ShippingTable.ship.COL_5 + " INTEGER," +
                     ShippingTable.ship.COL_6 + " INTEGER," +
                     ShippingTable.ship.COL_7 + " TEXT)";
+
+
 
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + ShippingTable.ship.TABLE_NAME;
