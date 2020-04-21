@@ -30,7 +30,7 @@ public class ShippingDetails extends AppCompatActivity {
 
 
         fname = findViewById(R.id.firstname);
-        lname = findViewById(R.id.lastname);
+        lname = findViewById(R.id.editText4);
         address = findViewById(R.id.addr);
         country = findViewById(R.id.country);
         pcode = findViewById(R.id.pcode);
