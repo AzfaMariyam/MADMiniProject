@@ -10,6 +10,8 @@ import android.widget.Button;
 public class PaymentDetails extends AppCompatActivity {
 
     private Button donebtn;
+    private Button editb;
+
 
 
     @Override
@@ -25,7 +27,14 @@ public class PaymentDetails extends AppCompatActivity {
             }
         });
 
-
+        editb = findViewById(R.id.editb);
+        editb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent continueIntent = new Intent(PaymentDetails.this, ShippingUpdate.class);
+                startActivity(continueIntent);
+            }
+        });
 
     }
 
