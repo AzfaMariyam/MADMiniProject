@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rmbackground"
     tools:context=".OrderSummary">
 
     <Button
@@ -78,13 +79,13 @@
         android:id="@+id/imageView5"
         android:layout_width="114dp"
         android:layout_height="103dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="9dp"
         android:layout_marginRight="9dp"
         android:layout_marginBottom="27dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/blueblouse" />
@@ -132,17 +133,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.111" />
 
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="41dp"
+        android:layout_height="37dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.834"
+        app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+        app:layout_constraintVertical_bias="0.037" />
 
     <ImageButton
         android:id="@+id/imageButton12"
@@ -230,7 +230,7 @@
         app:layout_constraintVertical_bias="0.289" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/country"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:ems="10"
