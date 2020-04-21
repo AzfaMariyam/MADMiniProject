@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
     DBHandler db;
+
     EditText uname,uemail,upass,ucpass;
     Button submit;
 
