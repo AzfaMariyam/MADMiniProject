@@ -162,6 +162,8 @@
 
     <string name="shipupdate">Update Shipping Details</string>
     <string name="deleteship">Delete Details</string>
+    <string name="viewshipdet">View Customer Shipping Details</string>
+    <string name="viewpaydet">View Customer Payment Details</string>
     <string name="additem2">Items</string>
     <string name="addpromo2">Promotions</string>
     <string name="shipping">View Shipping Details</string>

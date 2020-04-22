@@ -29,13 +29,13 @@ public class ShippingDetails extends AppCompatActivity {
         //newdb = new NewDbHandler(this);
 
 
-//        fname = findViewById(R.id.firstname);
-        lname = findViewById(R.id.editText4);
+        fname = findViewById(R.id.firstname);
+        lname = findViewById(R.id.lastname);
         address = findViewById(R.id.addr);
         country = findViewById(R.id.country);
-//        pcode = findViewById(R.id.pcode);
+      pcode = findViewById(R.id.pcode);
         tel = findViewById(R.id.telno);
-//        email = findViewById(R.id.email);
+        email = findViewById(R.id.email);
         btnSave = (Button) findViewById(R.id.savebtn);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -64,47 +64,3 @@ public class ShippingDetails extends AppCompatActivity {
     }
 
 }
-
-     /*   btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                openPaymentDetails();
-
-            }
-        });
-
-
-    }*/
-
-/*
-    @Override
-    protected void onResume() {
-        super.onResume();
-        btnSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               if(mydb.addShip(fname.getText().toString(),lname.getText().toString(), address.getText().toString(), country.getText().toString(), pcode.getText().toString(), tel.getText().toString(), email.getText().toString() )){
-                   Toast.makeText(ShippingDetails.this, "Added shipping details", Toast.LENGTH_LONG).show();
-                }
-               else
-                   Toast.makeText(ShippingDetails.this, "Could not add shipping details", Toast.LENGTH_LONG).show();
-
-
-            }
-        });
-    }*/
-
-
-
-
-
-/*
-    public void openPaymentDetails(){
-
-        Intent intent1 = new Intent(this,PaymentDetails.class);
-        startActivity(intent1);
-
-    }
-
-    }*/
