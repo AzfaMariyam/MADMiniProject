@@ -96,7 +96,6 @@
     <string name="send">Send</string>
 
 
-
     <string name="cont">Continue Shopping</string>
     <string name="pro">Proceed To Checkout</string>
     <string name="Title">e`Hanger</string>
@@ -146,8 +145,15 @@
     <string name="updatepromo">Update</string>
     <string name="confrim_password">Confrim Password</string>
     <string name="viewall">View All</string>
+
+    <string name="addI">ADD</string>
+    <string name="UpdateI">UPDATE</string>
+    <string name="DELETEi">DELETE</string>
+    <string name="ItemsAdmin">Item Settings</string>
+
     <string name="shipupdate">Update Shipping Details</string>
     <string name="deleteship">Delete Details</string>
+
 
 
 </resources>

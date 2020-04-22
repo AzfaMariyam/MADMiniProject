@@ -29,13 +29,13 @@ public class ShippingDetails extends AppCompatActivity {
         //newdb = new NewDbHandler(this);
 
 
-        fname = findViewById(R.id.firstname);
-        lname = findViewById(R.id.lastname);
+//        fname = findViewById(R.id.firstname);
+        lname = findViewById(R.id.editText4);
         address = findViewById(R.id.addr);
         country = findViewById(R.id.country);
-        pcode = findViewById(R.id.pcode);
+//        pcode = findViewById(R.id.pcode);
         tel = findViewById(R.id.telno);
-        email = findViewById(R.id.email);
+//        email = findViewById(R.id.email);
         btnSave = (Button) findViewById(R.id.savebtn);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
