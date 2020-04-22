@@ -23,21 +23,6 @@
         app:layout_constraintVertical_bias="0.202" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/first_name"
-        android:textColor="#191818"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304" />
-
-    <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,7 +98,7 @@
         app:layout_constraintVertical_bias="0.804" />
 
     <Button
-        android:id="@+id/savebtn"
+        android:id="@+id/updateshipbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FF59B57B"
@@ -127,7 +112,7 @@
 
     <Button
 
-        android:id="@+id/cancelbtn1"
+        android:id="@+id/delship"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -161,17 +146,6 @@
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <EditText
-        android:id="@+id/firstname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/lastname"
@@ -248,38 +222,6 @@
         app:layout_constraintVertical_bias="0.095" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="40dp"
-        android:maxHeight="40dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034"
-        app:srcCompat="@drawable/cart" />
-
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="40dp"
-        android:maxHeight="40dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034"
-        app:srcCompat="@drawable/search" />
-
-    <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="43dp"
         android:layout_height="42dp"
@@ -296,19 +238,32 @@
         app:srcCompat="@drawable/menu" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="170dp"
-        android:layout_height="22dp"
+        android:id="@+id/shipsearch"
+        android:layout_width="209dp"
+        android:layout_height="66dp"
         android:ems="10"
         android:hint="@string/first_name"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.005" />
+
+    <Button
+        android:id="@+id/searchShip"
+        android:layout_width="89dp"
+        android:layout_height="36dp"
+        android:background="#1BA2B3"
+        android:text="@string/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
