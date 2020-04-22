@@ -14,6 +14,23 @@
         </activity>
         <activity android:name=".itemAdmin" />
         <activity android:name=".ShippingUpdate" />
+
+
+
+
+        <activity android:name=".deletePromo"></activity>
+
+        <activity android:name=".AddPromo"></activity>
+
+
+        <activity android:name=".AdminPanel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".Search" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
