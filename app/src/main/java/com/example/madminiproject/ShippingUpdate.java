@@ -94,7 +94,7 @@ public class ShippingUpdate extends AppCompatActivity {
 
                 Toast.makeText(ShippingUpdate.this, "Shipping Details Deleted", Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(getApplicationContext(),PaymentDetails.class);
+                Intent i = new Intent(getApplicationContext(),ShippingDetails.class);
                 startActivity(i);
 
                 search.setText(null);
