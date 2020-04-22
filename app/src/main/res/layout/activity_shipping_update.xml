@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imggg"
-    tools:context=".ShippingDetails">
+    tools:context=".ShippingUpdate">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="284dp"
         android:layout_height="69dp"
-        android:text="@string/shipping_details"
+        android:text="@string/shipupdate"
         android:textColor="#191818"
-        android:textSize="24sp"
+        android:textSize="21sp"
         android:textStyle="bold"
         app:fontFamily="serif"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -133,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="#FFF33224"
-        android:text="@string/cancel"
+        android:text="@string/deleteship"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.829"
@@ -142,7 +141,7 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -164,7 +163,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/firstname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -175,7 +174,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/lastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -186,7 +185,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/pcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -295,5 +294,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034"
         app:srcCompat="@drawable/menu" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="170dp"
+        android:layout_height="22dp"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

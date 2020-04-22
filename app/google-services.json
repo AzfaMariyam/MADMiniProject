@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "656666918125",
+    "firebase_url": "https://ehanger-mad.firebaseio.com",
+    "project_id": "ehanger-mad",
+    "storage_bucket": "ehanger-mad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656666918125:android:f458ed6f7391b86b8fa0e4",
+        "android_client_info": {
+          "package_name": "com.example.madminiproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "656666918125-9gjeelbhuvm7f2gaqrje76g9of5bm437.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madminiproject",
+            "certificate_hash": "417afc2959d4e3331a002935bb48fe80f67a59a2"
+          }
+        },
+        {
+          "client_id": "656666918125-b0m34hhm8pkqcfnmq3vmqm2fb6fe1rvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madminiproject",
+            "certificate_hash": "2e80f0b5cdd170ec822a8f6c72a3c996d947e385"
+          }
+        },
+        {
+          "client_id": "656666918125-egjtj3ofv0e9gd3j894dfka3oi6cnoc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHw_VresePNxeFu6H8eolsOgrjRW-zQlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "656666918125-egjtj3ofv0e9gd3j894dfka3oi6cnoc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
