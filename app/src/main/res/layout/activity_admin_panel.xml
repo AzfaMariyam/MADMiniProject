@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorButtonNormal"
+    tools:context=".AdminPanel">
+
+    <TextView
+        android:id="@+id/adminpanel"
+        android:layout_width="215dp"
+        android:layout_height="65dp"
+        android:text="@string/admin1"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/addpromo1"
+        android:layout_width="240dp"
+        android:layout_height="55dp"
+        android:background="@drawable/cc"
+        android:text="@string/addpromo1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminpanel"
+        app:layout_constraintVertical_bias="0.831" />
+
+    <Button
+        android:id="@+id/additems2"
+        android:layout_width="232dp"
+        android:layout_height="51dp"
+        android:background="@drawable/gh"
+        android:text="@string/additems1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/addpromo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminpanel"
+        app:layout_constraintVertical_bias="0.809" />
+</androidx.constraintlayout.widget.ConstraintLayout>

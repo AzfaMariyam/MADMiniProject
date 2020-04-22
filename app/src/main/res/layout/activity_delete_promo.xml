@@ -29,9 +29,122 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".deletePromo"
-        tools:layout_editor_absoluteX="-26dp"
-        tools:layout_editor_absoluteY="80dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".deletePromo">
+
+        <Button
+            android:id="@+id/deletepromo"
+            android:layout_width="67dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/holo_red_dark"
+            android:text="@string/deletepromo2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/updatepromo"
+            android:layout_width="68dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorAccent"
+            android:text="@string/updatepromo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.868"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnid"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:background="@android:color/darker_gray"
+            android:text="@string/btnid"
+            app:layout_constraintBottom_toTopOf="@+id/updatepromo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.663"
+            app:layout_constraintStart_toEndOf="@+id/findid"
+            app:layout_constraintTop_toBottomOf="@+id/deletepromo2"
+            app:layout_constraintVertical_bias="0.121" />
+
+        <Button
+            android:id="@+id/viewall2"
+            android:layout_width="69dp"
+            android:layout_height="39dp"
+            android:background="@android:color/holo_purple"
+            android:text="@string/viewall2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deletepromo"
+            app:layout_constraintHorizontal_bias="0.637"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promocode2"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <EditText
+            android:id="@+id/findid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter ID"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/deletepromo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deletepromo2"
+            app:layout_constraintVertical_bias="0.109" />
+
+        <EditText
+            android:id="@+id/promodep2"
+            android:layout_width="261dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/cat3"
+            android:layout_width="256dp"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/updatepromo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/promodep2"
+            app:layout_constraintVertical_bias="0.214" />
+
+        <EditText
+            android:id="@+id/promocode2"
+            android:layout_width="244dp"
+            android:layout_height="57dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/updatepromo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cat3"
+            app:layout_constraintVertical_bias="0.297" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="41dp"
+            android:layout_height="37dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.044" />
 
         <TextView
             android:id="@+id/deletepromo2"
@@ -47,17 +160,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.203" />
 
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="41dp"
-            android:layout_height="37dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.956"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.044" />
-
         <TextView
             android:id="@+id/promo2"
             android:layout_width="157dp"
@@ -70,74 +172,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.097" />
-
-        <TextView
-            android:id="@+id/code1"
-            android:layout_width="65dp"
-            android:layout_height="35dp"
-            android:text="@string/code1"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.104"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/deletepromo2"
-            app:layout_constraintVertical_bias="0.178" />
-
-        <TextView
-            android:id="@+id/category1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/category1"
-            android:textColor="@android:color/background_dark"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.116"
-            app:layout_constraintStart_toEndOf="@+id/code1"
-            app:layout_constraintTop_toBottomOf="@+id/deletepromo2"
-            app:layout_constraintVertical_bias="0.174" />
-
-        <TextView
-            android:id="@+id/action1"
-            android:layout_width="69dp"
-            android:layout_height="43dp"
-            android:text="@string/action1"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.596"
-            app:layout_constraintStart_toEndOf="@+id/category1"
-            app:layout_constraintTop_toBottomOf="@+id/deletepromo2"
-            app:layout_constraintVertical_bias="0.182" />
-
-        <Button
-            android:id="@+id/deletepromo"
-            android:layout_width="59dp"
-            android:layout_height="33dp"
-            android:background="@android:color/holo_red_dark"
-            android:text="@string/deletepromo2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.897"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/action1"
-            app:layout_constraintVertical_bias="0.072" />
-
-        <Button
-            android:id="@+id/updatepromo"
-            android:layout_width="61dp"
-            android:layout_height="35dp"
-            android:background="@color/colorAccent"
-            android:text="@string/updatepromo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.897"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/action1"
-            app:layout_constraintVertical_bias="0.294" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
