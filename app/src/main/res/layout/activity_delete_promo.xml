@@ -7,8 +7,8 @@
     tools:context=".deletePromo">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="423dp"
-        android:layout_height="610dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/promoback"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,26 +18,25 @@
 
         <Button
             android:id="@+id/deletepromo"
-            android:layout_width="67dp"
-            android:layout_height="41dp"
-            android:layout_marginBottom="28dp"
-            android:background="@android:color/holo_red_dark"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="#8BCC0000"
             android:text="@string/deletepromo2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.547"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/updatepromo"
-            android:layout_width="68dp"
-            android:layout_height="41dp"
-            android:layout_marginBottom="28dp"
-            android:background="@color/colorAccent"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="#8803DAC5"
             android:text="@string/updatepromo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.864"
+            app:layout_constraintHorizontal_bias="0.827"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
@@ -55,16 +54,17 @@
 
         <Button
             android:id="@+id/viewall2"
-            android:layout_width="69dp"
-            android:layout_height="39dp"
-            android:background="@android:color/holo_purple"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="#A14CAF7C"
             android:text="@string/viewall2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/deletepromo"
-            app:layout_constraintHorizontal_bias="0.66"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/promocode2"
-            app:layout_constraintVertical_bias="0.567" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <EditText
             android:id="@+id/findid"
@@ -89,7 +89,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.532" />
 
         <EditText
             android:id="@+id/cat3"
@@ -116,6 +117,18 @@
             app:layout_constraintTop_toBottomOf="@+id/cat3"
             app:layout_constraintVertical_bias="0.297" />
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="243dp"
+            android:layout_height="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/promo2"
+            app:layout_constraintEnd_toStartOf="@+id/searchView"
+            app:layout_constraintHorizontal_bias="0.765"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.571"
+            app:srcCompat="@drawable/ehangerlogo" />
+
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="41dp"
@@ -136,10 +149,10 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintHorizontal_bias="0.223"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.203" />
+            app:layout_constraintVertical_bias="0.27" />
 
         <TextView
             android:id="@+id/promo2"
@@ -152,24 +165,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.11" />
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="cursive"
-            android:gravity="center_horizontal"
-            android:text="@string/name"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/promo2"
-            app:layout_constraintEnd_toStartOf="@+id/searchView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:targetApi="jelly_bean" />
+            app:layout_constraintVertical_bias="0.195" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
