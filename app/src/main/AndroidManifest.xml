@@ -24,17 +24,21 @@
         <activity android:name=".ShopingCart"></activity>
         <activity android:name=".UpdateDeleteItem" />
         <activity android:name=".AddItem" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ItemDetails" />
         <activity android:name=".itemDisplay" />
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".ShippingDetails" />
+        <activity android:name=".ShippingDetails" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".MainActivity">
 
         </activity>
