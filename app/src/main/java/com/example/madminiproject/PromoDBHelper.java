@@ -177,6 +177,11 @@ public class PromoDBHelper extends SQLiteOpenHelper {
 
 
     }
+    public Cursor getAllData1(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+Table_Name,null);
+        return  res;
+    }
 
 
 }
