@@ -167,6 +167,10 @@
     <string name="additem2">Items</string>
     <string name="addpromo2">Promotions</string>
     <string name="shipping">View Shipping Details</string>
+    <string name="welcome">Welcome to</string>
+    <string name="button11">forgot password</string>
+    <string name="lgin">Login</string>
+    <string name="email1">E-mail</string>
 
 
 </resources>

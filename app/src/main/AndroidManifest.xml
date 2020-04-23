@@ -6,6 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/eHanger"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -23,7 +24,14 @@
         <activity android:name=".AddPromo"></activity>
 
 
-        <activity android:name=".AdminPanel">
+        <activity android:name=".AdminPanel"/>
+
+
+        <activity android:name=".Search" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Myprofile" />
+        <activity android:name=".Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,11 +39,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Search" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".Myprofile" />
-        <activity android:name=".Login" />
         <activity android:name=".OrderSummary" />
         <activity android:name=".UpdateCart" />
         <activity android:name=".ShopingCart" />
@@ -43,11 +46,6 @@
         <activity android:name=".AddItem">
 
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity android:name=".ItemDetails" />

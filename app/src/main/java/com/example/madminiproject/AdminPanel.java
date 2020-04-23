@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class AdminPanel extends AppCompatActivity {
 
-    Button s1,s2;
+    Button s1,s2,s3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class AdminPanel extends AppCompatActivity {
 
         s1 = findViewById(R.id.additems2);
         s2 = findViewById(R.id.addpromo1);
+        s3 = findViewById(R.id.shipping);
 
 
 
@@ -32,6 +33,13 @@ public class AdminPanel extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openaddpromo();
+            }
+        });
+
+        s3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openshipping();
             }
         });
 
@@ -53,4 +61,12 @@ public class AdminPanel extends AppCompatActivity {
         i1 = new Intent(this, AddPromo.class);
         startActivity(i1);
     }
+
+    public void openshipping(){
+        Intent i1;
+        i1 = new Intent(this, ViewShipPay.class);
+        startActivity(i1);
+
+    }
+
 }
