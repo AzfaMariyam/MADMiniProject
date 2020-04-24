@@ -8,20 +8,20 @@ public final class ItemModel {
     private String name;
     private String price;
     private String description;
-    private String color;
     private String size;
     private Integer qty;
+    private String img;
 
-    public ItemModel(String code, String date, String name, String price, String description, String color, String size, Integer qty) {
+    public ItemModel(String code, String date, String name, String price, String description, String size, Integer qty, String img) {
 
         this.code = code;
         this.date = date;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.color = color;
         this.size = size;
         this.qty = qty;
+        this.img = img;
     }
 
     public ItemModel() {
@@ -67,13 +67,6 @@ public final class ItemModel {
         this.description = description;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
 
     public String getSize() {
         return size;
@@ -89,5 +82,13 @@ public final class ItemModel {
 
     public void setQty(Integer qty) {
         this.qty = qty;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
