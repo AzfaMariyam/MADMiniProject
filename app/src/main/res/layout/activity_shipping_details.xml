@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imggg"
+    android:background="@drawable/wlp"
     tools:context=".ShippingDetails">
 
     <TextView
@@ -117,7 +117,7 @@
         android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FF59B57B"
+        android:background="#7884D6"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -233,21 +233,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.387" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="138dp"
-        android:layout_height="50dp"
-        android:text="@string/shopname"
-        android:textColor="#0B0A0A"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/dancing_script"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
-
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="43dp"
@@ -295,5 +280,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.034"
         app:srcCompat="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@drawable/finalll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
