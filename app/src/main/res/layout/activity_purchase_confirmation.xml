@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     android:adjustViewBounds="true"
-    android:background="@drawable/shirt"
+    android:background="@drawable/wlp"
     android:maxWidth="450dp"
     android:maxHeight="750dp"
     android:scaleType="fitCenter"
@@ -41,43 +41,13 @@
         app:fontFamily="sans-serif-thin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="113dp"
-        android:layout_height="74dp"
-        android:text="@string/total"
-        android:textColor="#191818"
-        android:textSize="24sp"
-        app:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="160dp"
-        android:layout_height="67dp"
-        android:text="@string/priceord"
-        android:textColor="#191818"
-        android:textSize="24sp"
-        app:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.628" />
+        app:layout_constraintVertical_bias="0.288" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/confirmpay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FF59B57B"
@@ -85,13 +55,12 @@
         android:text="@string/cofp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.533" />
 
     <Button
-        android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFF33224"
@@ -99,10 +68,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
+        app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintVertical_bias="0.788" />
 
     <ImageButton
         android:id="@+id/imageButton"
