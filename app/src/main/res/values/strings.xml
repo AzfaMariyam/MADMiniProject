@@ -145,6 +145,15 @@
     <string name="updatepromo">Update</string>
     <string name="confrim_password">Confrim Password</string>
     <string name="viewall">View All</string>
+    <string name="editpromo">Edit</string>
+    <string name="findid">Enter ID</string>
+    <string name="btnid">Search</string>
+    <string name="viewall2">View All</string>
+    <string name="adminpanel">Admin Panel</string>
+    <string name="adminpanel1">Admin Dashborad</string>
+    <string name="admin1">Admin Dashboard</string>
+    <string name="additems1">Add Items</string>
+    <string name="addpromo1">Add Promotions</string>
 
     <string name="addI">ADD</string>
     <string name="UpdateI">UPDATE</string>
@@ -153,8 +162,19 @@
 
     <string name="shipupdate">Update Shipping Details</string>
     <string name="deleteship">Delete Details</string>
+
     <string name="productItemLayoutTV2">ItemName</string>
     <string name="productItemsLayoutTV3">ItemPrice</string>
+
+    <string name="viewshipdet">View Customer Shipping Details</string>
+    <string name="viewpaydet">View Customer Payment Details</string>
+    <string name="additem2">Items</string>
+    <string name="addpromo2">Promotions</string>
+    <string name="shipping">View Shipping Details</string>
+    <string name="welcome">Welcome to</string>
+    <string name="button11">forgot password</string>
+    <string name="lgin">Login</string>
+    <string name="email1">E-mail</string>
 
 
 </resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a8e2e54d0b58c0047abd7b086deb011c"
+    tools:context=".AdminPanel">
+
+    <Button
+        android:id="@+id/addpromo1"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:background="#51859195"
+        android:text="@string/addpromo2"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminpanel"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <Button
+        android:id="@+id/additems2"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:background="#72A1AEAD"
+        android:text="@string/additem2"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/addpromo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminpanel"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <TextView
+        android:id="@+id/adminpanel"
+        android:layout_width="246dp"
+        android:layout_height="91dp"
+        android:text="@string/admin1"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.232" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="176dp"
+        android:layout_height="105dp"
+        app:layout_constraintBottom_toTopOf="@+id/adminpanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ehangerlogo" />
+
+    <Button
+        android:id="@+id/shipping"
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:background="#51859195"
+        android:text="@string/shipping"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpromo1"
+        app:layout_constraintVertical_bias="0.561" />
+</androidx.constraintlayout.widget.ConstraintLayout>
