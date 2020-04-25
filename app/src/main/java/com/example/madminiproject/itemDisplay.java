@@ -1,5 +1,6 @@
 package com.example.madminiproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,19 +8,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
 public class itemDisplay extends AppCompatActivity {
     private static final String TAG = "itemDisplay";
 
-    //vars
-    private ArrayList<String> mName = new ArrayList<>();
-    private ArrayList<String> mPrice = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
     DatabaseReference refDB;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,28 +33,43 @@ public class itemDisplay extends AppCompatActivity {
         setContentView(R.layout.activity_item_display);
         Log.d(TAG, "oncreate: started");
 
-        initImageBitmaps();
+        refDB = FirebaseDatabase.getInstance().getReference().child("item");
+
+        recyclerView = findViewById(R.id.recycler_menu);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
     }
 
-    private void initImageBitmaps(){
-        Log.d(TAG, "initImgBitmaps: preparing bitmaps");
+    @Override
+    protected void onStart() {
+        super.onStart();
 
-        mImageUrls.add("https://cdn.elkor.lv/media/catalog/product/cache/0/image/9df78eab33525d08d6e5fb8d27136e95/1/6/164008_9p291_00020_emporio_armani.png.jpg");
-        mName.add("Shirt");
-        mPrice.add("Rs.2550.00");
+        FirebaseRecyclerOptions<ItemModel>options =
+                new FirebaseRecyclerOptions.Builder<ItemModel>()
+                .setQuery(refDB, ItemModel.class)
+                .build();
 
-        mImageUrls.add("https://images.asos-media.com/products/armani-exchange-text-logo-t-shirt-in-black/11138204-1-black?$XXL$&wid=513&fit=constrain");
-        mName.add("TShirt");
-        mPrice.add("Rs.2850.00");
+        FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter> adapter=
+                new FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull ItemModel model) {
 
-        initRecyclerView();
-    }
+                        holder.txtPruductName.setText(model.getName());
+                        holder.txtProductPrice.setText("Rs" + model.getPrice() + ".00");
 
-    private void initRecyclerView(){
-        Log.d(TAG,"initRecy: initrecy");
+                        Picasso.get().load(model.getImg()).into(holder.imageView);
+                    }
 
-        RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mName, mPrice, mImageUrls);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+                    @NonNull
+                    @Override
+                    public RecyclerViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent,false);
+                        RecyclerViewAdapter holder = new RecyclerViewAdapter(view);
+                        return holder;
+                    }
+                };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
     }
 }

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     public void openItemDisplay(){
 
        // Intent i1 = new Intent(this,itemDisplay.class);
-        Intent i1 = new Intent(this, ShippingDetails.class);
+        Intent i1 = new Intent(this, itemDisplay.class);
         startActivity(i1);
     }
 

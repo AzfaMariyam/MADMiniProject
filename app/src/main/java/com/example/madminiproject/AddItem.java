@@ -39,7 +39,7 @@ import java.util.Calendar;
 
 public class AddItem extends AppCompatActivity {
     private static final String TAG = "AddItem";
-    public static final int RESULT_LOAD_IMAGE = 0;
+
 
     private ImageView image;
     private static final int GalleryPick = 1;
@@ -60,6 +60,7 @@ public class AddItem extends AppCompatActivity {
         price.setText("");
         description.setText("");
         quantity.setText("");
+        image.setImageURI(null);
     }
 
     @Override
@@ -129,6 +130,7 @@ public class AddItem extends AppCompatActivity {
                     else if (TextUtils.isEmpty(price.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter the item price" , Toast.LENGTH_SHORT).show();
                     else {
+                        StoreItemImg();
                         //take inputs from admin n assigning them
                         ItemModel item = new ItemModel(
                                 code.getText().toString(),
@@ -142,9 +144,7 @@ public class AddItem extends AppCompatActivity {
                         );
 
 
-                        StoreItemImg();
-
-                        //inserting to db
+//                        inserting to db
                         refDB.push().setValue(item);
 
                         Toast.makeText(getApplicationContext(), "Item added successfully!" , Toast.LENGTH_SHORT).show();
@@ -168,15 +168,7 @@ public class AddItem extends AppCompatActivity {
             }
         });
 
-//        addImg.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                Intent i = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//                startActivityForResult(i, RESULT_LOAD_IMAGE);
-//            }
 
-//        });
 
         image.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +177,23 @@ public class AddItem extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    private void OpenGallery(){
+        Intent galleryi = new Intent();
+        galleryi.setAction(Intent.ACTION_GET_CONTENT);
+        galleryi.setType("image/*");
+        startActivityForResult(galleryi, GalleryPick);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==GalleryPick && resultCode==RESULT_OK && data!=null){
+            imageUri = data.getData();
+            image.setImageURI(imageUri);
+        }
     }
 
     private void StoreItemImg() {
@@ -217,6 +226,7 @@ public class AddItem extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Uri> task) {
                         if (task.isSuccessful()) {
+                            downloadimgUrl = task.getResult().toString();
                             Toast.makeText(AddItem.this, "Got the product img url successfully", Toast.LENGTH_SHORT).show();
 
                         }
@@ -224,22 +234,6 @@ public class AddItem extends AppCompatActivity {
                 });
             }
         });
-    }
-
-    private void OpenGallery(){
-        Intent galleryi = new Intent();
-        galleryi.setAction(Intent.ACTION_GET_CONTENT);
-        galleryi.setType("image/*");
-        startActivityForResult(galleryi, GalleryPick);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==GalleryPick && resultCode==RESULT_OK && data!=null){
-            imageUri = data.getData();
-            image.setImageURI(imageUri);
-        }
     }
 
 
