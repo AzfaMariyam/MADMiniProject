@@ -162,6 +162,10 @@
 
     <string name="shipupdate">Update Shipping Details</string>
     <string name="deleteship">Delete Details</string>
+
+    <string name="productItemLayoutTV2">ItemName</string>
+    <string name="productItemsLayoutTV3">ItemPrice</string>
+
     <string name="viewshipdet">View Customer Shipping Details</string>
     <string name="viewpaydet">View Customer Payment Details</string>
     <string name="additem2">Items</string>
