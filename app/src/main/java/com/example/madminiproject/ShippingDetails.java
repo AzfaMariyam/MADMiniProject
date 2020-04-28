@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,22 +43,47 @@ public class ShippingDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //validationg the form
+                if(TextUtils.isEmpty(fname.getText())){
+                    fname.setError("Please enter First name!");
+                    fname.requestFocus();}
+                else if(TextUtils.isEmpty(lname.getText())){
+                    lname.setError("Please enter last name!");
+                    lname.requestFocus(); }
+                else if(TextUtils.isEmpty(address.getText())){
+                    address.setError("Please enter Address!");
+                    address.requestFocus(); }
+                else if(TextUtils.isEmpty(country.getText())){
+                    country.setError("Please enter your country!");
+                    country.requestFocus(); }
+                else if(TextUtils.isEmpty(pcode.getText())){
+                    pcode.setError("Please enter the postal code!");
+                    pcode.requestFocus(); }
+                else if(TextUtils.isEmpty(tel.getText())){
+                    tel.setError("Please enter your telephone no.!");
+                    tel.requestFocus(); }
+                else if(TextUtils.isEmpty(email.getText())){
+                    email.setError("Please enter your email!");
+                    email.requestFocus(); }
 
-                ShippingDetHandler newdb = new ShippingDetHandler(getApplicationContext());
-                long newID = newdb.addInfo(fname.getText().toString(), lname.getText().toString(), address.getText().toString(), country.getText().toString(), pcode.getText().toString(), tel.getText().toString(), email.getText().toString());
-                Toast.makeText(ShippingDetails.this, "Shipping Details saved!    Shipping ID: " + newID, Toast.LENGTH_LONG).show();
+                //adding data
+                else {
 
-                Intent i = new Intent(getApplicationContext(), PaymentDetails.class);
-                startActivity(i);
-                fname.setText(null);
-                lname.setText(null);
-                address.setText(null);
-                country.setText(null);
-                pcode.setText(null);
-                tel.setText(null);
-                email.setText(null);
+                    ShippingDetHandler newdb = new ShippingDetHandler(getApplicationContext());
+                    long newID = newdb.addInfo(fname.getText().toString(), lname.getText().toString(), address.getText().toString(), country.getText().toString(), pcode.getText().toString(), tel.getText().toString(), email.getText().toString());
+                    Toast.makeText(ShippingDetails.this, "Shipping Details saved!    Shipping ID: " + newID, Toast.LENGTH_LONG).show();
 
+                    Intent i = new Intent(getApplicationContext(), PaymentDetails.class);
+                    startActivity(i);
+                    fname.setText(null);
+                    lname.setText(null);
+                    address.setText(null);
+                    country.setText(null);
+                    pcode.setText(null);
+                    tel.setText(null);
+                    email.setText(null);
 
+                }
             }
         });
 
