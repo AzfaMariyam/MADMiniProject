@@ -121,8 +121,7 @@ public class AddItem extends AppCompatActivity {
         addItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                refDB = FirebaseDatabase.getInstance().getReference().child("item");
-                try {
+                try {                refDB = FirebaseDatabase.getInstance().getReference().child("item");
                     if(TextUtils.isEmpty(code.getText().toString()))
                         Toast.makeText(getApplicationContext(), "Please enter the item code" , Toast.LENGTH_SHORT).show();
                     else if (TextUtils.isEmpty(name.getText().toString()))

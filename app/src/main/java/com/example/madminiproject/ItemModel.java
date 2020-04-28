@@ -11,6 +11,7 @@ public final class ItemModel {
     private String size;
     private Integer qty;
     private String img;
+    private String key;
 
     public ItemModel(String code, String date, String name, String price, String description, String size, Integer qty, String img) {
 
@@ -26,6 +27,11 @@ public final class ItemModel {
 
     public ItemModel() {
     }
+
+
+    public String getKey() { return key; }
+
+    public void setKey(String key){ this.key = key; }
 
     public String getCode() {
         return code;

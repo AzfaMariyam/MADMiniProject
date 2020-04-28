@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -48,7 +50,15 @@ public class itemDisplay extends AppCompatActivity {
 
         FirebaseRecyclerOptions<ItemModel>options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
-                .setQuery(refDB, ItemModel.class)
+                .setQuery(refDB, new SnapshotParser<ItemModel>() {
+                    @NonNull
+                    @Override
+                    public ItemModel parseSnapshot(@NonNull DataSnapshot snapshot) {
+                        ItemModel item = snapshot.getValue(ItemModel.class);
+                        item.setKey(snapshot.getKey());
+                        return item;
+                    }
+                })
                 .build();
 
         FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter> adapter=
@@ -65,7 +75,7 @@ public class itemDisplay extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(itemDisplay.this, ItemDetails.class);
-                                intent.putExtra("code", model.getCode());
+                                intent.putExtra("code", model.getKey());
                                 startActivity(intent);
                             }
                         });
