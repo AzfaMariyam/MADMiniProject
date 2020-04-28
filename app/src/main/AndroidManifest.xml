@@ -35,11 +35,6 @@
         <activity android:name=".SignUp" />
         <activity android:name=".Myprofile" />
         <activity android:name=".Login"> >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
 
@@ -48,7 +43,7 @@
         <activity android:name=".OrderSummary" />
         <activity android:name=".UpdateCart" />
         <activity android:name=".ShopingCart" />
-        <activity android:name=".UpdateDeleteItem" />
+        <activity android:name=".ItemUpdateDelete" />
         <activity android:name=".AddItem">
 
 
@@ -57,7 +52,12 @@
         <activity android:name=".ItemDetails" />
 
 
-        <activity android:name=".itemDisplay" />
+        <activity android:name=".itemDisplay" ><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />

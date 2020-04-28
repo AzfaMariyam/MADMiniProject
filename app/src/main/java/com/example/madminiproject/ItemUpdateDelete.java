@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class UpdateDeleteItem extends AppCompatActivity {
+public class ItemUpdateDelete extends AppCompatActivity {
 
     ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_update_delete_item);
+        setContentView(R.layout.activity_item_update_delete);
 
         back = findViewById(R.id.imageButton6);
 
@@ -23,7 +23,7 @@ public class UpdateDeleteItem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(UpdateDeleteItem.this, itemAdmin.class);
+                Intent i = new Intent(ItemUpdateDelete.this, itemAdmin.class);
                 startActivity(i);
             }
         });

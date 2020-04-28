@@ -175,6 +175,7 @@
     <string name="button11">forgot password</string>
     <string name="lgin">Login</string>
     <string name="email1">E-mail</string>
+    <string name="icode">ItemCode</string>
 
 
 </resources>

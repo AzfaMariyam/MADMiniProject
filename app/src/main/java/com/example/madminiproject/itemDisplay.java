@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,12 +54,21 @@ public class itemDisplay extends AppCompatActivity {
         FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter> adapter=
                 new FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull ItemModel model) {
+                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull final ItemModel model) {
 
                         holder.txtPruductName.setText(model.getName());
                         holder.txtProductPrice.setText("Rs" + model.getPrice() + ".00");
 
                         Picasso.get().load(model.getImg()).into(holder.imageView);
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(itemDisplay.this, ItemDetails.class);
+                                intent.putExtra("code", model.getCode());
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
