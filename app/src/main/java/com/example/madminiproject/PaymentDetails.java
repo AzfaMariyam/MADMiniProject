@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,17 +38,33 @@ public class PaymentDetails extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                ShippingDetHandler newdbp = new ShippingDetHandler(getApplicationContext());
-                long newID = newdbp.addPayInfo(cardn.getText().toString(),fullnc.getText().toString(),cexpdate.getText().toString(),secno.getText().toString());
-                Toast.makeText(PaymentDetails.this, "Added Payment Details successfully!    Payment ID: "+ newID, Toast.LENGTH_LONG).show();
+                //valadating the form
+                if(TextUtils.isEmpty(cardn.getText())){
+                    cardn.setError("Please enter card number!");
+                    cardn.requestFocus();}
+                else if(TextUtils.isEmpty(fullnc.getText())){
+                    fullnc.setError("Please enter full name!");
+                    fullnc.requestFocus(); }
+                else if(TextUtils.isEmpty(cexpdate.getText())){
+                    cexpdate.setError("Please enter expiry date!");
+                    cexpdate.requestFocus(); }
+                else if(TextUtils.isEmpty(secno.getText())){
+                    secno.setError("Please enter Security code!");
+                    secno.requestFocus(); }
 
-                Intent i = new Intent(getApplicationContext(),PurchaseConfirmation.class);
-                startActivity(i);
-                cardn.setText(null);
-                fullnc.setText(null);
-                cexpdate.setText(null);
-                secno.setText(null);
+                //add data
+                else {
+                    ShippingDetHandler newdbp = new ShippingDetHandler(getApplicationContext());
+                    long newID = newdbp.addPayInfo(cardn.getText().toString(), fullnc.getText().toString(), cexpdate.getText().toString(), secno.getText().toString());
+                    Toast.makeText(PaymentDetails.this, "Added Payment Details successfully!    Payment ID: " + newID, Toast.LENGTH_LONG).show();
 
+                    Intent i = new Intent(getApplicationContext(), PurchaseConfirmation.class);
+                    startActivity(i);
+                    cardn.setText(null);
+                    fullnc.setText(null);
+                    cexpdate.setText(null);
+                    secno.setText(null);
+                }
             }
         });
 

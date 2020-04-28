@@ -48,8 +48,8 @@
 
     <Button
         android:id="@+id/confirmpay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="66dp"
         android:background="#FF59B57B"
         android:clickable="true"
         android:text="@string/cofp"
@@ -61,11 +61,12 @@
         app:layout_constraintVertical_bias="0.533" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/cancelorder"
+        android:layout_width="142dp"
+        android:layout_height="65dp"
         android:background="#FFF33224"
-        android:text="@string/delete"
 
+        android:text="@string/canord"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
