@@ -27,7 +27,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //recyclerview
-        //noinspection GradleCompatible
+    //noinspection GradleCompatible
     implementation 'com.android.support:recyclerview-v7:28.0.0'
 
     //glide
