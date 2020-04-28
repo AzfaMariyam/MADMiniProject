@@ -175,6 +175,9 @@
     <string name="button11">forgot password</string>
     <string name="lgin">Login</string>
     <string name="email1">E-mail</string>
+    <string name="thankyou">Thank You for shopping with us!</string>
+    <string name="backhome">Back to Homepage</string>
+    <string name="canord">Cancel Order</string>
 
 
 </resources>
