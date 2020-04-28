@@ -1,58 +1,75 @@
 package com.example.madminiproject;
 
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
+
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 public class itemDisplay extends AppCompatActivity {
-    //Button b1;
-    //PromoDBHelper mydb;
+    private static final String TAG = "itemDisplay";
+
+    DatabaseReference refDB;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_display);
+        Log.d(TAG, "oncreate: started");
 
-        //b1 = findViewById(R.id.button13);
-        //viewAllpromo();
+        refDB = FirebaseDatabase.getInstance().getReference().child("item");
 
-
+        recyclerView = findViewById(R.id.recycler_menu);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
     }
-    /*public void viewAllpromo(){
-        b1.setOnClickListener(
-                new View.OnClickListener() {
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions<ItemModel>options =
+                new FirebaseRecyclerOptions.Builder<ItemModel>()
+                .setQuery(refDB, ItemModel.class)
+                .build();
+
+        FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter> adapter=
+                new FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter>(options) {
                     @Override
-                    public void onClick(View v) {
-                        Cursor res = mydb.getAllData();
-                        if(res.getCount()==0){
-                            ShowMessage("Error!!","Nothing Found!!");
-                            return;
-                        }
+                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull ItemModel model) {
 
-                        StringBuffer buffer = new StringBuffer();
-                        while(res.moveToNext()){
-                            //buffer.append("Id :"+ res.getString(0 )+ "\n" );
-                            buffer.append("Promotion:"+ res.getString(1 )+ "\n" );
-                            buffer.append("Category :"+ res.getString(2 )+ "\n" );
-                            buffer.append("Promo Code:"+ res.getString(3 )+ "\n\n" );
+                        holder.txtPruductName.setText(model.getName());
+                        holder.txtProductPrice.setText("Rs" + model.getPrice() + ".00");
 
-                        }
-                        ShowMessage("Promotion Details",buffer.toString());
+                        Picasso.get().load(model.getImg()).into(holder.imageView);
                     }
-                }
-        );
+
+                    @NonNull
+                    @Override
+                    public RecyclerViewAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem, parent,false);
+                        RecyclerViewAdapter holder = new RecyclerViewAdapter(view);
+                        return holder;
+                    }
+                };
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
     }
-
-    public  void ShowMessage(String title,String Message){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setTitle(title);
-        builder.setMessage(Message);
-        builder.show();
-    }*/
-
 }
