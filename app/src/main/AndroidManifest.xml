@@ -46,7 +46,11 @@
         <activity android:name=".ItemUpdateDelete" />
         <activity android:name=".AddItem">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity android:name=".ItemDetails" />
@@ -60,11 +64,7 @@
         <activity android:name=".ShippingDetails">
 
         </activity>
-        <activity android:name=".MainActivity"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+        <activity android:name=".MainActivity"> </activity>
 
         <meta-data
             android:name="preloaded_fonts"
