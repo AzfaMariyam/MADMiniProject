@@ -28,6 +28,7 @@ public class ItemUpdate extends AppCompatActivity {
     private EditText name, price, description;
     private ImageView image;
     private String itemId = "";
+    private ItemModel item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,12 @@ public class ItemUpdate extends AppCompatActivity {
             Toast.makeText(this, "Enter the description of the product", Toast.LENGTH_SHORT).show();
         }
         else{
+            item.setName(iname);
+            item.setPrice(iprice);
+            item.setDescription(ides);
 
+            DatabaseReference itemRef = FirebaseDatabase.getInstance().getReference().child("item");
+            itemRef.child(item.getKey()).setValue(item);
         }
     }
 
@@ -79,7 +85,7 @@ public class ItemUpdate extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
-                    ItemModel item = dataSnapshot.getValue(ItemModel.class);
+                    item = dataSnapshot.getValue(ItemModel.class);
 
                     String pName = dataSnapshot.child( "name" ).getValue().toString();
                     String pPrice = dataSnapshot.child( "price" ).getValue().toString();
