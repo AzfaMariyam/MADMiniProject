@@ -75,6 +75,8 @@ public class ItemUpdate extends AppCompatActivity {
 
             DatabaseReference itemRef = FirebaseDatabase.getInstance().getReference().child("item");
             itemRef.child(item.getKey()).setValue(item);
+            Toast.makeText(this, "Updated Successfully!", Toast.LENGTH_SHORT).show();
+
         }
     }
 
