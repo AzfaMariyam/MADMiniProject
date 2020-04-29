@@ -86,7 +86,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
                         holder.deleteI.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                deleteItem();
+                                deleteItem(model.getKey());
                             }
                         });
 
@@ -98,6 +98,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         });
+
                     }
 
                     @NonNull
@@ -112,12 +113,10 @@ public class ItemUpdateDelete extends AppCompatActivity {
         adapter.startListening();
     }
 
-    private void deleteItem() {
-        refDB.child(item.getKey()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+    private void deleteItem(String key) {
+        refDB.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-
-
                 finish();
                 Toast.makeText( ItemUpdateDelete.this, "Item deleted successfully!", Toast.LENGTH_SHORT ).show();
 
