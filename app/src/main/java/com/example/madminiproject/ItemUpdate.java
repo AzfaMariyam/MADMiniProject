@@ -80,7 +80,7 @@ public class ItemUpdate extends AppCompatActivity {
         }
     }
 
-    private void getItemDetails(String itemId) {
+    private void getItemDetails(final String itemId) {
         DatabaseReference itemRef = FirebaseDatabase.getInstance().getReference().child("item");
 
         itemRef.child(itemId).addValueEventListener(new ValueEventListener() {
@@ -88,6 +88,7 @@ public class ItemUpdate extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
                     item = dataSnapshot.getValue(ItemModel.class);
+                    item.setKey(itemId);
 
                     String pName = dataSnapshot.child( "name" ).getValue().toString();
                     String pPrice = dataSnapshot.child( "price" ).getValue().toString();
