@@ -52,7 +52,7 @@ public class ViewShipPay extends AppCompatActivity {
                             buffer.append("Telephone no :"+ res.getString(6 )+ "\n" );
                             buffer.append("Email :"+ res.getString(7 )+ "\n\n" );
                         }
-                        ShowMessage("VShipping Details",buffer.toString());
+                        ShowMessage("Shipping Details",buffer.toString());
                     }
                 }
         );

@@ -51,10 +51,20 @@ public class Login extends AppCompatActivity {
                 UserDBHelper db = new UserDBHelper(getApplicationContext());
                 Boolean checkmailpass = db.emailpassword(email, pass);
 
-                if (checkmailpass==true){
-                    Toast.makeText(getApplicationContext(), "Successfully Logging", Toast.LENGTH_SHORT).show();
+
+                if(email.equals("admin@gmail.com")){
+
+                    Toast.makeText(Login.this, "Logged into Admin Panel !", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(getApplicationContext(),AdminPanel.class);
+                    startActivity(i);
+                }
+
+                else if (checkmailpass==true){
+                    Toast.makeText(getApplicationContext(), "Successfully Logged in !", Toast.LENGTH_SHORT).show();
                     Intent i = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(i);}
+                    startActivity(i);
+                }
                 else
                     Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
             }

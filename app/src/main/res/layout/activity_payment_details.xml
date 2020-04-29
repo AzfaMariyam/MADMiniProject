@@ -154,54 +154,6 @@
         app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="40dp"
-        android:maxHeight="40dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.991"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/shoppingcart" />
-
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="40dp"
-        android:maxHeight="40dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/search" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="43dp"
-        android:layout_height="42dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="40dp"
-        android:maxHeight="40dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/menu" />
-
     <Button
         android:id="@+id/editb"
         android:layout_width="wrap_content"
