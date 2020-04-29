@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -50,17 +51,23 @@ public class AddPromo extends AppCompatActivity {
         AddData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*if(e1.equals("") ||  e2.equals("") || e3.equals("")){
-                    Toast.makeText(getApplicationContext(),"Feilds are empty",Toast.LENGTH_SHORT).show();*/
 
-                boolean isInserted = mydb.insertData(e1.getText().toString(),e2.getText().toString(),e3.getText().toString());
+                boolean isInserted = mydb.insertData(e1.getText().toString(), e2.getText().toString(), e3.getText().toString());
+                if(TextUtils.isEmpty(e1.getText())){
+                    e1.setError("Please enter promotion description!");
+                    e1.requestFocus();}
+                else if(TextUtils.isEmpty(e2.getText())){
+                    e2.setError("Please enter categories!");
+                    e2.requestFocus(); }
+                else if(TextUtils.isEmpty(e3.getText())){
+                    e3.setError("Please enter promocode!");
+                    e3.requestFocus(); }
 
-
-                 if (isInserted == true)
-                    Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_SHORT).show();
+                else{if(isInserted == true)
+                    Toast.makeText(getApplicationContext(), "Data Inserted", Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(getApplicationContext(),"Data not Inserted",Toast.LENGTH_SHORT).show();
-            }
+                    Toast.makeText(getApplicationContext(), "Data not Inserted", Toast.LENGTH_SHORT).show();
+            }}
         });
     }
     public void ViewAll(){

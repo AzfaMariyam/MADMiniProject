@@ -184,7 +184,7 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addCartbtn"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="275dp"
         android:layout_height="37dp"
@@ -307,4 +307,20 @@
         app:layout_constraintVertical_bias="0.927"
         app:srcCompat="@drawable/heart" />
 
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/newEleg"
+        android:layout_width="149dp"
+        android:layout_height="37dp"
+
+        android:elevation="6dp"
+        app:backGroundColor="#3F51B5"
+        app:finalNumber="10"
+        app:initialNumber="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
+        app:textColor="#F3F0F0"
+        app:textSize="8dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

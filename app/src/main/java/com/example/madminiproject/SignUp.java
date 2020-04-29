@@ -38,7 +38,7 @@ public class SignUp extends AppCompatActivity {
                 String a3 = ucpass.getText().toString();
                 String a4 = uname.getText().toString();
 
-                if (a2.equals("") || a3.equals("") || a1.equals("") || a4.equals("")) {
+                if (a1.equals("") || a2.equals("") || a3.equals("") || a4.equals("")) {
                     Toast.makeText(getApplicationContext(), "Feilds are empty", Toast.LENGTH_SHORT).show();
                 } else {
                     if (a2.equals(a3)) {
@@ -49,14 +49,16 @@ public class SignUp extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Rejistered Succuessfully", Toast.LENGTH_SHORT).show();
                             }
 
+
                         } else {
+
                             Toast.makeText(getApplicationContext(), "Email Already Exists", Toast.LENGTH_SHORT).show();
                         }
 
-                    }
-                    //Toast.makeText(getApplicationContext(),"Password do not match",Toast.LENGTH_SHORT).show();
-                }
 
+                    }else
+                    Toast.makeText(getApplicationContext(),"Password do not match",Toast.LENGTH_SHORT).show();
+                }
                 //Toast.makeText(getApplicationContext(),"Password do not match",Toast.LENGTH_SHORT).show();
             }
 

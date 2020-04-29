@@ -35,8 +35,8 @@ public class ItemUpdateDelete extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_item_update_delete);
         setContentView(R.layout.activity_item_update_delete);
-
         refDB = FirebaseDatabase.getInstance().getReference().child("item");
 
         back = findViewById(R.id.imageButton6);
