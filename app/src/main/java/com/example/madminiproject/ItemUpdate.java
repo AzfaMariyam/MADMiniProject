@@ -57,7 +57,6 @@ public class ItemUpdate extends AppCompatActivity {
         String iname = name.getText().toString();
         String iprice = price.getText().toString();
         String ides = description.getText().toString();
-//        String iimg = name.getText().toString();
 
         if (iname.equals("")){
             Toast.makeText(this, "Enter the name of the product", Toast.LENGTH_SHORT).show();

@@ -117,8 +117,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
         refDB.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                finish();
-                Toast.makeText( ItemUpdateDelete.this, "Item deleted successfully!", Toast.LENGTH_SHORT ).show();
+                Toast.makeText(ItemUpdateDelete.this, "Item deleted successfully!", Toast.LENGTH_SHORT ).show();
 
             }
         });
