@@ -8,6 +8,12 @@
     <string name="item">Name</string>
     <string name="action">Action</string>
     <string name="update_delete">Update/ Delete an item</string>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Excel</item>
+    </string-array>
     <string name="shop_now">SHOP NOw</string>
     <string name="girl_power_collection">Girl Power Collection</string>
     <string name="women">WOMEN\'S</string>
@@ -17,7 +23,9 @@
     <string name="size">Size</string>
     <string name="add_to_cart">Add to Cart</string>
     <string name="insert">Insert an item</string>
-  <string name="color">Color code</string>
+
+    <string name="colorC">Color code</string>
+
     <string name="quantity">Quantity</string>
     <string name="iprice">Price</string>
     <string name="idescription">Description</string>
@@ -88,7 +96,6 @@
     <string name="send">Send</string>
 
 
-
     <string name="cont">Continue Shopping</string>
     <string name="pro">Proceed To Checkout</string>
     <string name="Title">e`Hanger</string>
@@ -121,6 +128,9 @@
     <string name="fmtot">Rs.5100.00</string>
     <string name="hrtot">Rs.1050.00</string>
     <string name="ggtot">Rs.7750.00</string>
+
+    <string name="dashboard">DASHBOARD</string>
+
     <string name="addpromo">Add Promotions</string>
     <string name="promo">Promotions</string>
     <string name="promodep">Promotion Description</string>
@@ -134,5 +144,44 @@
     <string name="deletepromo2">Delete</string>
     <string name="updatepromo">Update</string>
     <string name="confrim_password">Confrim Password</string>
+    <string name="viewall">View All</string>
+    <string name="editpromo">Edit</string>
+    <string name="findid">Enter ID</string>
+    <string name="btnid">Search</string>
+    <string name="viewall2">View All</string>
+    <string name="adminpanel">Admin Panel</string>
+    <string name="adminpanel1">Admin Dashborad</string>
+    <string name="admin1">Admin Dashboard</string>
+    <string name="additems1">Add Items</string>
+    <string name="addpromo1">Add Promotions</string>
+
+    <string name="addI">ADD</string>
+    <string name="UpdateI">UPDATE</string>
+    <string name="DELETEi">DELETE</string>
+    <string name="ItemsAdmin">Item Settings</string>
+
+    <string name="shipupdate">Update Shipping Details</string>
+    <string name="deleteship">Delete Details</string>
+
+    <string name="productItemLayoutTV2">ItemName</string>
+    <string name="productItemsLayoutTV3">ItemPrice</string>
+
+    <string name="viewshipdet">View Customer Shipping Details</string>
+    <string name="viewpaydet">View Customer Payment Details</string>
+    <string name="additem2">Items</string>
+    <string name="addpromo2">Promotions</string>
+    <string name="shipping">View Shipping Details</string>
+    <string name="welcome">Welcome to</string>
+    <string name="button11">forgot password</string>
+    <string name="lgin">Login</string>
+    <string name="email1">E-mail</string>
+
+    <string name="icode">ItemCode</string>
+
+    <string name="thankyou">Thank You for shopping with us!</string>
+    <string name="backhome">Back to Homepage</string>
+    <string name="canord">Cancel Order</string>
+
+
 
 </resources>
