@@ -36,7 +36,7 @@ public class itemAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(itemAdmin.this, UpdateDeleteItem.class);
+                Intent i = new Intent(itemAdmin.this, ItemUpdateDelete.class);
                 startActivity(i);
             }
         });
@@ -45,7 +45,7 @@ public class itemAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(itemAdmin.this, UpdateDeleteItem.class);
+                Intent i = new Intent(itemAdmin.this, ItemUpdateDelete.class);
                 startActivity(i);
             }
         });

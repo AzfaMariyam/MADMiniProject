@@ -13,9 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminLogin"></activity>
-        <activity android:name=".Finalpg" />
-        <activity android:name=".ViewShipPay" />
+        <activity android:name=".ViewShipPay">
+
+        </activity>
         <activity android:name=".itemAdmin" />
         <activity android:name=".ShippingUpdate" />
         <activity android:name=".deletePromo" />
@@ -28,24 +28,34 @@
         <activity android:name=".Login">
 
         </activity>
+
+
+
         <activity android:name=".OrderSummary" />
         <activity android:name=".UpdateCart" />
         <activity android:name=".ShopingCart" />
-        <activity android:name=".UpdateDeleteItem" />
-        <activity android:name=".AddItem"></activity>
+        <activity android:name=".ItemUpdateDelete" />
+        <activity android:name=".AddItem">
+
+
+
+        </activity>
         <activity android:name=".ItemDetails" />
-        <activity android:name=".itemDisplay" />
+
+
+        <activity android:name=".itemDisplay" >
+        </activity>
+
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
         <activity android:name=".ShippingDetails">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
 
         <meta-data
             android:name="preloaded_fonts"

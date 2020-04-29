@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import android.view.ViewGroup;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -47,18 +50,35 @@ public class itemDisplay extends AppCompatActivity {
 
         FirebaseRecyclerOptions<ItemModel>options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
-                .setQuery(refDB, ItemModel.class)
+                .setQuery(refDB, new SnapshotParser<ItemModel>() {
+                    @NonNull
+                    @Override
+                    public ItemModel parseSnapshot(@NonNull DataSnapshot snapshot) {
+                        ItemModel item = snapshot.getValue(ItemModel.class);
+                        item.setKey(snapshot.getKey());
+                        return item;
+                    }
+                })
                 .build();
 
         FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter> adapter=
                 new FirebaseRecyclerAdapter<ItemModel, RecyclerViewAdapter>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull ItemModel model) {
+                    protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull final ItemModel model) {
 
                         holder.txtPruductName.setText(model.getName());
                         holder.txtProductPrice.setText("Rs" + model.getPrice() + ".00");
 
                         Picasso.get().load(model.getImg()).into(holder.imageView);
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(itemDisplay.this, ItemDetails.class);
+                                intent.putExtra("code", model.getKey());
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
