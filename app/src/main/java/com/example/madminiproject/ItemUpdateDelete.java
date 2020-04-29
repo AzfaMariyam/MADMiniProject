@@ -12,10 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.database.SnapshotParser;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -27,6 +30,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
     DatabaseReference refDB;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    private ItemModel item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
 
@@ -78,6 +83,13 @@ public class ItemUpdateDelete extends AppCompatActivity {
                         holder.txtPruductName.setText(model.getName());
                         holder.txtProductCode.setText(model.getCode());
 
+                        holder.deleteI.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                deleteItem();
+                            }
+                        });
+
                         holder.updateI.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -100,6 +112,18 @@ public class ItemUpdateDelete extends AppCompatActivity {
         adapter.startListening();
     }
 
+    private void deleteItem() {
+        refDB.child(item.getKey()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+
+                finish();
+                Toast.makeText( ItemUpdateDelete.this, "Item deleted successfully!", Toast.LENGTH_SHORT ).show();
+
+            }
+        });
+    }
 
 
 }
