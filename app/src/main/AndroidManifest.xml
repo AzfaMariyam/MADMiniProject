@@ -18,18 +18,9 @@
         </activity>
         <activity android:name=".itemAdmin" />
         <activity android:name=".ShippingUpdate" />
-
-
-
-
-        <activity android:name=".deletePromo"></activity>
-
-        <activity android:name=".AddPromo"/>
-
-
-        <activity android:name=".AdminPanel"/>
-
-
+        <activity android:name=".deletePromo" />
+        <activity android:name=".AddPromo" />
+        <activity android:name=".AdminPanel" />
         <activity android:name=".Search" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
