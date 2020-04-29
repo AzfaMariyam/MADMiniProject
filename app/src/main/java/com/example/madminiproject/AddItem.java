@@ -130,24 +130,8 @@ public class AddItem extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Please enter the item price" , Toast.LENGTH_SHORT).show();
                     else {
                         StoreItemImg();
-                        //take inputs from admin n assigning them
-                        ItemModel item = new ItemModel(
-                                code.getText().toString(),
-                                date.getText().toString(),
-                                name.getText().toString(),
-                                price.getText().toString(),
-                                description.getText().toString(),
-                                size.getSelectedItem().toString(),
-                                Integer.parseInt(quantity.getText().toString()),
-                                downloadimgUrl
-                        );
 
 
-//                        inserting to db
-                        refDB.push().setValue(item);
-
-                        Toast.makeText(getApplicationContext(), "Item added successfully!" , Toast.LENGTH_SHORT).show();
-                        clearControls();
 
                     }
                 }
@@ -227,12 +211,33 @@ public class AddItem extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             downloadimgUrl = task.getResult().toString();
                             Toast.makeText(AddItem.this, "Got the product img url successfully", Toast.LENGTH_SHORT).show();
-
+                            SaveItemInfo();
                         }
                     }
                 });
             }
         });
+    }
+
+    private void  SaveItemInfo(){
+        //take inputs from admin n assigning them
+        ItemModel item = new ItemModel(
+                code.getText().toString(),
+                date.getText().toString(),
+                name.getText().toString(),
+                price.getText().toString(),
+                description.getText().toString(),
+                size.getSelectedItem().toString(),
+                Integer.parseInt(quantity.getText().toString()),
+                downloadimgUrl
+        );
+
+//                        inserting to db
+        refDB.push().setValue(item);
+
+        Toast.makeText(getApplicationContext(), "Item added successfully!" , Toast.LENGTH_SHORT).show();
+        clearControls();
+
     }
 
 

@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -42,12 +43,14 @@ public class itemDisplay extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
+        //load to product details
         FirebaseRecyclerOptions<ItemModel>options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
                 .setQuery(refDB, new SnapshotParser<ItemModel>() {

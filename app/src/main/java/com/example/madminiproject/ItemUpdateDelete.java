@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -22,8 +24,6 @@ import com.squareup.picasso.Picasso;
 public class ItemUpdateDelete extends AppCompatActivity {
 
     ImageButton back;
-
-
     DatabaseReference refDB;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
@@ -56,9 +56,18 @@ public class ItemUpdateDelete extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerOptions<ItemModel> options =
+        //load to product details
+        FirebaseRecyclerOptions<ItemModel>options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
-                        .setQuery(refDB, ItemModel.class)
+                        .setQuery(refDB, new SnapshotParser<ItemModel>() {
+                            @NonNull
+                            @Override
+                            public ItemModel parseSnapshot(@NonNull DataSnapshot snapshot) {
+                                ItemModel item = snapshot.getValue(ItemModel.class);
+                                item.setKey(snapshot.getKey());
+                                return item;
+                            }
+                        })
                         .build();
 
         FirebaseRecyclerAdapter<ItemModel, ItemUpDelAdapter> adapter=
@@ -69,14 +78,14 @@ public class ItemUpdateDelete extends AppCompatActivity {
                         holder.txtPruductName.setText(model.getName());
                         holder.txtProductCode.setText(model.getCode());
 
-//                        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                Intent intent = new Intent(itemDisplay.this, ItemDetails.class);
-//                                intent.putExtra("code", model.getCode());
-//                                startActivity(intent);
-//                            }
-//                        });
+                        holder.updateI.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(ItemUpdateDelete.this, ItemUpdate.class);
+                                intent.putExtra("code", model.getKey());
+                                startActivity(intent);
+                            }
+                        });
                     }
 
                     @NonNull
