@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     public TextView cpName, cpPrice, cpQty;
-    private ItemClickListener itemClickListener;
+    private ItemClickListner itemClickListener;
 
     public CartViewHolder(@NonNull  View itemView) {
         super(itemView);
@@ -23,7 +23,7 @@ public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnCl
         itemClickListener.onClick(view, getAdapterPosition(),false);
     }
 
-    public void setItemClickListener(ItemClickListener itemClickListener) {
+    public void setItemClickListener(ItemClickListner itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
 }
