@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     android:adjustViewBounds="true"
-    android:background="@drawable/wlp"
+    android:background="@drawable/blubg"
     android:maxWidth="450dp"
     android:maxHeight="750dp"
     android:scaleType="fitCenter"
