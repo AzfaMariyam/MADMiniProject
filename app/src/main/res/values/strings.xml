@@ -185,6 +185,7 @@
     <string name="adminMaintainProductET2">Item Price</string>
     <string name="adminMaintainProductET3">Item Description</string>
     <string name="adminMaintainProductBTN1">Apply Changes</string>
+    <string name="addprom">+promocode</string>
 
 
 </resources>
