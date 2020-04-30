@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -32,6 +33,7 @@ public class itemDisplay extends AppCompatActivity {
     DatabaseReference refDB;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    ImageButton cartbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +42,22 @@ public class itemDisplay extends AppCompatActivity {
         Log.d(TAG, "oncreate: started");
 
         refDB = FirebaseDatabase.getInstance().getReference().child("item");
+       // cartbtn = findViewById(R.id.imageButton19);
+        cartbtn = (ImageButton) findViewById(R.id.imageButton19) ;
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+
+
+        cartbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(itemDisplay.this, ShopingCart.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
