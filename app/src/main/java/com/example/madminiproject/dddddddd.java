@@ -1,4 +1,4 @@
 package com.example.madminiproject;
 
-public class finalpromo {
+public class dddddddd {
 }
