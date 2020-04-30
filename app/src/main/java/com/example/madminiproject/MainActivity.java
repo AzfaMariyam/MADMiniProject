@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewallData1 = findViewById(R.id.prom);
         b4 = findViewById(R.id.button4);
+        mydb = new PromoDBHelper(this);
+
         ViewAll1();
+
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
