@@ -34,6 +34,15 @@ public class PaymentDetails extends AppCompatActivity {
         editb = findViewById(R.id.editb);
         cancelbtn = findViewById(R.id.cancelpaybtn);
 
+
+        cancelbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent continueIntent = new Intent(PaymentDetails.this, MainActivity.class);
+                startActivity(continueIntent);
+            }
+        });
+
         donebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

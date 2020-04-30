@@ -37,7 +37,18 @@ public class ShippingDetails extends AppCompatActivity {
       pcode = findViewById(R.id.pcode);
         tel = findViewById(R.id.telno);
         email = findViewById(R.id.email);
-        btnSave = (Button) findViewById(R.id.savebtn);
+        btnSave =  findViewById(R.id.savebtn);
+        cancelb1 = findViewById(R.id.cancelbtn1);
+
+
+
+        cancelb1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent continueIntent = new Intent(ShippingDetails.this, MainActivity.class);
+                startActivity(continueIntent);
+            }
+        });
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
