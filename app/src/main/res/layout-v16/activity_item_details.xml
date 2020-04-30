@@ -191,16 +191,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@android:color/darker_gray"
+        android:background="@drawable/s3"
         android:drawableLeft="@drawable/ic_cart_24dp"
-        android:elevation="0dp"
         android:text="@string/add_to_cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.289"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
+        app:layout_constraintVertical_bias="0.899" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -279,9 +278,10 @@
         android:id="@+id/spinnerS"
         android:layout_width="128dp"
         android:layout_height="26dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.282" />
@@ -291,8 +291,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
         android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:maxWidth="40dp"
@@ -301,26 +301,27 @@
         android:src="@drawable/heart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addCartbtn"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.927"
+        app:layout_constraintVertical_bias="0.909"
         app:srcCompat="@drawable/heart" />
 
     <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
         android:id="@+id/newEleg"
-        android:layout_width="149dp"
-        android:layout_height="37dp"
+        android:layout_width="79dp"
+        android:layout_height="26dp"
 
         android:elevation="6dp"
-        app:backGroundColor="#3F51B5"
+        app:backGroundColor="#D1D1D1"
         app:finalNumber="10"
         app:initialNumber="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858"
-        app:textColor="#F3F0F0"
+        app:layout_constraintVertical_bias="0.8"
+        app:textColor="#000000"
         app:textSize="8dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
