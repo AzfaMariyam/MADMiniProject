@@ -12,9 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.firebase.ui.database.SnapshotParser;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -22,11 +27,10 @@ import com.squareup.picasso.Picasso;
 public class ItemUpdateDelete extends AppCompatActivity {
 
     ImageButton back;
-
-
     DatabaseReference refDB;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    private ItemModel item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,7 @@ public class ItemUpdateDelete extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
 
@@ -56,9 +61,18 @@ public class ItemUpdateDelete extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        FirebaseRecyclerOptions<ItemModel> options =
+        //load to product details
+        FirebaseRecyclerOptions<ItemModel>options =
                 new FirebaseRecyclerOptions.Builder<ItemModel>()
-                        .setQuery(refDB, ItemModel.class)
+                        .setQuery(refDB, new SnapshotParser<ItemModel>() {
+                            @NonNull
+                            @Override
+                            public ItemModel parseSnapshot(@NonNull DataSnapshot snapshot) {
+                                ItemModel item = snapshot.getValue(ItemModel.class);
+                                item.setKey(snapshot.getKey());
+                                return item;
+                            }
+                        })
                         .build();
 
         FirebaseRecyclerAdapter<ItemModel, ItemUpDelAdapter> adapter=
@@ -69,14 +83,22 @@ public class ItemUpdateDelete extends AppCompatActivity {
                         holder.txtPruductName.setText(model.getName());
                         holder.txtProductCode.setText(model.getCode());
 
-//                        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View v) {
-//                                Intent intent = new Intent(itemDisplay.this, ItemDetails.class);
-//                                intent.putExtra("code", model.getCode());
-//                                startActivity(intent);
-//                            }
-//                        });
+                        holder.deleteI.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                deleteItem(model.getKey());
+                            }
+                        });
+
+                        holder.updateI.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent intent = new Intent(ItemUpdateDelete.this, ItemUpdate.class);
+                                intent.putExtra("code", model.getKey());
+                                startActivity(intent);
+                            }
+                        });
+
                     }
 
                     @NonNull
@@ -91,6 +113,15 @@ public class ItemUpdateDelete extends AppCompatActivity {
         adapter.startListening();
     }
 
+    private void deleteItem(String key) {
+        refDB.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(ItemUpdateDelete.this, "Item deleted successfully!", Toast.LENGTH_SHORT ).show();
+
+            }
+        });
+    }
 
 
 }

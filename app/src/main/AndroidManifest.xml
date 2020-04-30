@@ -12,14 +12,15 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme"
         tools:replace="android:label"
         android:hardwareAccelerated="false">
 
+        <activity android:name=".ItemUpdate" />
+        <activity android:name=".ViewShipPay" />
 
-        <activity android:name=".ViewShipPay">
 
-        </activity>
         <activity android:name=".itemAdmin" />
         <activity android:name=".ShippingUpdate" />
         <activity android:name=".deletePromo" />
@@ -29,37 +30,26 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".Myprofile" />
-        <activity android:name=".Login">
+        <activity android:name=".Login"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        </activity>
-
-
-
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
         <activity android:name=".OrderSummary" />
         <activity android:name=".UpdateCart" />
         <activity android:name=".ShopingCart" />
         <activity android:name=".ItemUpdateDelete" />
         <activity android:name=".AddItem">
-
-
-
         </activity>
         <activity android:name=".ItemDetails" />
-
-
-        <activity android:name=".itemDisplay" >
-        </activity>
-
+        <activity android:name=".itemDisplay" />
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
-        <activity android:name=".ShippingDetails">
+        <activity android:name=".ShippingDetails" />
+        <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".MainActivity"> <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
 
         <meta-data
             android:name="preloaded_fonts"

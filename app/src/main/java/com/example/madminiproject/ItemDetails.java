@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageButton;
+
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ import java.util.HashMap;
 
 public class ItemDetails extends AppCompatActivity {
 
+    ImageButton back;
     private ImageView itemImage;
     private TextView itemName, itemPrice, itemDescription;
     private String itemId = "";
@@ -41,7 +44,7 @@ public class ItemDetails extends AppCompatActivity {
         setContentView(R.layout.activity_item_details);
 
         itemId = getIntent().getStringExtra("code");
-
+        back = findViewById(R.id.imageButton6);
         itemImage = (ImageView) findViewById(R.id.imageView15);
         itemName = (TextView) findViewById(R.id.textView3);
         itemPrice = (TextView) findViewById(R.id.textView4);
@@ -59,6 +62,14 @@ public class ItemDetails extends AppCompatActivity {
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(ItemDetails.this, itemDisplay.class);
+                startActivity(i);
+            }
+        });
 
         addCartbtn.setOnClickListener(new View.OnClickListener() {
             @Override
