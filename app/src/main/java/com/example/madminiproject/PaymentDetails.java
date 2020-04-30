@@ -65,7 +65,7 @@ public class PaymentDetails extends AppCompatActivity {
                 else {
                     ShippingDetHandler newdbp = new ShippingDetHandler(getApplicationContext());
                     long newID = newdbp.addPayInfo(cardn.getText().toString(), fullnc.getText().toString(), cexpdate.getText().toString(), secno.getText().toString());
-                    Toast.makeText(PaymentDetails.this, "Added Payment Details successfully!    Payment ID: " + newID, Toast.LENGTH_LONG).show();
+                    Toast.makeText(PaymentDetails.this, "Added Payment Details successfully!   " , Toast.LENGTH_LONG).show();
 
                     Intent i = new Intent(getApplicationContext(), PurchaseConfirmation.class);
                     startActivity(i);
