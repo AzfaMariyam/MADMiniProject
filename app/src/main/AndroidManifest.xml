@@ -12,6 +12,7 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme"
         tools:replace="android:label"
         android:hardwareAccelerated="false">
@@ -45,7 +46,8 @@
         <activity android:name=".PurchaseConfirmation" />
         <activity android:name=".PaymentDetails" />
         <activity android:name=".ShippingDetails" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

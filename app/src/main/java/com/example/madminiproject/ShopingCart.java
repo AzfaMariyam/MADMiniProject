@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 public class ShopingCart extends AppCompatActivity {
 
     private Button proceed;
-    //    private Button button3;
+    private Button conti;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private int grandTotal = 0;
@@ -48,7 +48,7 @@ public class ShopingCart extends AppCompatActivity {
         proceed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                openOrderSummary();
+
 
                 Intent intent = new Intent (ShopingCart.this, OrderSummary.class);
                 intent.putExtra("Grand Total", String.valueOf(grandTotal));
@@ -57,13 +57,15 @@ public class ShopingCart extends AppCompatActivity {
             }
         });
 
-//        button3 = (Button) findViewById(R.id.button3);
-//        button3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openUpdateCart();
-//            }
-//        });
+        conti = (Button) findViewById(R.id.backtoo);
+        conti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ShopingCart.this, itemDisplay.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
@@ -73,14 +75,14 @@ public class ShopingCart extends AppCompatActivity {
 
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart");
 
-        FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(cartListRef.child("Item"), Cart.class).build();
+        FirebaseRecyclerOptions<Cart> options = new FirebaseRecyclerOptions.Builder<Cart>().setQuery(cartListRef.child("item"), Cart.class).build();
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull CartViewHolder holder, final int i, @NonNull final Cart cart) {
+            protected void onBindViewHolder(@NonNull CartViewHolder holder,  int position, @NonNull final Cart cart) {
                 holder. cpName.setText(cart.getPname());
-                holder. cpPrice.setText("Price "+cart.getPrice()+"LKR");
-                holder. cpQty.setText("Quantity"+cart.getQty());
+                holder. cpPrice.setText("Price  "+cart.getPrice()+" LKR");
+                holder. cpQty.setText("Quantity  "+cart.getQty());
 
                 int oneItemTotal = ((Integer.valueOf(cart.getPrice()))) * Integer.valueOf(cart.getQty());
                 grandTotal = grandTotal + oneItemTotal;
@@ -95,23 +97,23 @@ public class ShopingCart extends AppCompatActivity {
                         AlertDialog.Builder builder = new AlertDialog.Builder(ShopingCart.this);
                         builder.setTitle("Cart Options:");
 
-                        builder.setItems(options, new DialogInterface.OnClickListener() {
+                        builder.setItems(options,  new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int i1) {
                                 if (i1 == 0){
                                     Intent intent = new Intent(ShopingCart.this,ItemDetails.class);
-                                    intent.putExtra("code",(cart.getCode()));
+                                    intent.putExtra("code",cart.getPcode());
                                     startActivity(intent);
+
                                 }
 
                                 if (i1 == 1){
-                                    cartListRef.child("Item").child(cart.getCode()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    cartListRef.child("item").child(cart.getPcode()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(ShopingCart.this,"Item is removed successfully", Toast.LENGTH_SHORT).show();
                                                 Intent intent = new Intent(ShopingCart.this,itemDisplay.class);
-
                                                 startActivity(intent);
                                             }
                                         }
@@ -133,6 +135,8 @@ public class ShopingCart extends AppCompatActivity {
             }
         };
 
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
 
     }
 //    public void openOrderSummary () {

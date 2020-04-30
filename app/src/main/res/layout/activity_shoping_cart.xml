@@ -4,8 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rmbackground"
+    android:background="@drawable/ru"
     tools:context=".ShopingCart">
+
+    <Button
+        android:id="@+id/backtoo"
+        android:layout_width="222dp"
+        android:layout_height="45dp"
+        android:background="@android:color/background_light"
+        android:text="@string/cont"
+        android:textColor="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.973" />
 
     <SearchView
         android:id="@+id/searchView"
@@ -17,7 +30,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037" />
-
 
 
     <TextView
@@ -85,6 +97,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03"
         app:srcCompat="@drawable/shoppingcart" />
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="41dp"
@@ -191,50 +204,29 @@
 
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="222dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="182dp"
-        android:layout_marginLeft="182dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
-        android:background="@android:color/background_light"
-        android:capitalize="characters"
-        android:text="@string/cont"
-        android:textColor="#00BCD4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
-    <Button
         android:id="@+id/proceed"
         android:layout_width="224dp"
         android:layout_height="44dp"
-        android:layout_marginStart="182dp"
-        android:layout_marginLeft="182dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:background="#39B630"
+        android:background="#38E87F"
         android:text="@string/pro"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.862" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cart_list"
-        android:layout_width="392dp"
-        android:layout_height="388dp"
+        android:layout_width="383dp"
+        android:layout_height="356dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
+        app:layout_constraintVertical_bias="0.498" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,27 +1,26 @@
 package com.example.madminiproject;
 
 public class Cart {
-    private String code,pname,price,qty,size,color;
+    private String pcode,pname,price,qty;
 
         public Cart() {
         }
 
-    public Cart(String pid, String pname, String price, String qty, String size, String color) {
-        this.code = code;
+    public Cart(String pcode, String pname, String price, String qty) {
+        this.pcode = pcode;
         this.pname = pname;
         this.price = price;
         this.qty = qty;
-        this.size = size;
-        this.color = color;
+
     }
 
 
-    public String getCode() {
-        return code;
+    public String getPcode() {
+        return pcode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setPcode(String pcode) {
+        this.pcode = pcode;
     }
 
     public String getPname() {
@@ -48,19 +47,5 @@ public class Cart {
         this.qty = qty;
     }
 
-    public String getSize() {
-        return size;
-    }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
 }
