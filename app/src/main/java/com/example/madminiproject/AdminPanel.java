@@ -51,7 +51,7 @@ public class AdminPanel extends AppCompatActivity {
     public void  openadditem(){
 
         Intent i1;
-        i1 = new Intent(this, AddItem.class);
+        i1 = new Intent(this, itemAdmin.class);
         startActivity(i1);
     }
 

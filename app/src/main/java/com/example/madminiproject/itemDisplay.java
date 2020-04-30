@@ -72,7 +72,7 @@ public class itemDisplay extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull RecyclerViewAdapter holder, int position, @NonNull final ItemModel model) {
 
                         holder.txtPruductName.setText(model.getName());
-                        holder.txtProductPrice.setText("Rs" + model.getPrice() + ".00");
+                        holder.txtProductPrice.setText("Rs." + model.getPrice() + ".00");
 
                         Picasso.get().load(model.getImg()).into(holder.imageView);
 
