@@ -144,7 +144,7 @@
         android:id="@+id/button4"
         android:layout_width="143dp"
         android:layout_height="34dp"
-        android:background="@drawable/s3"
+        android:background="#64BCE4"
         android:text="@string/shop_now"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

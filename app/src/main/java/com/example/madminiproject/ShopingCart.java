@@ -84,6 +84,7 @@ public class ShopingCart extends AppCompatActivity {
                 holder. cpPrice.setText("Price  "+cart.getPrice()+" LKR");
                 holder. cpQty.setText("Quantity  "+cart.getQty());
 
+
                 int oneItemTotal = ((Integer.valueOf(cart.getPrice()))) * Integer.valueOf(cart.getQty());
                 grandTotal = grandTotal + oneItemTotal;
 
