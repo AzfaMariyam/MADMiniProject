@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         viewallData1 = findViewById(R.id.prom);
         b4 = findViewById(R.id.button4);
+        mydb = new PromoDBHelper(this);
         ViewAll1();
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,28 +34,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    public void ViewAll1(){
-        viewallData1.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Cursor res = mydb.getAllData1();
-                        if(res.getCount()==0){
-                            ShowMessage("Error!!","Nothing Found!!");
-                            return;
-                        }
+    public void ViewAll1() {
+        viewallData1.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Cursor res = mydb.getAllData1();
+                                                if (res.getCount() == 0) {
+                                                    ShowMessage("Error!!", "Nothing Found!!");
+                                                    return;
+                                                }
+                                                StringBuffer buffer = new StringBuffer();
+                                                while (res.moveToNext()) {
 
-                        StringBuffer buffer = new StringBuffer();
-                        while(res.moveToNext()){
-
-                            buffer.append("Promotion:"+ res.getString(1 )+ "\n" );
-                            buffer.append("Category :"+ res.getString(2 )+ "\n" );
-                            buffer.append("Promo Code:"+ res.getString(3 )+ "\n\n" );
-
-                        }
-                        ShowMessage("Promotion Details",buffer.toString());
-                    }
-                }
+                                                    buffer.append("Promotion:" + res.getString(1) + "\n");
+                                                    buffer.append("Category :" + res.getString(2) + "\n");
+                                                    buffer.append("Promo Code:" + res.getString(3) + "\n\n");
+                                                }
+                                                ShowMessage("Promotion Details", buffer.toString());
+                                            }
+                                        }
         );
     }
 
