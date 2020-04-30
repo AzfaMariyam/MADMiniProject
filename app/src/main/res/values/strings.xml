@@ -18,7 +18,7 @@
     <string name="girl_power_collection">Girl Power Collection</string>
     <string name="women">WOMEN\'S</string>
     <string name="description">Our hoodies are known for their exceptionally soft fleece and comfortable fit. Matching sweatpant available. Regular Fit. 68% cotton, 32% polyester.</string>
-    <string name="price">Rs.2000.00</string>
+    <string name="price">2000</string>
     <string name="iname">Pink Sweatshirt</string>
     <string name="size">Size</string>
     <string name="add_to_cart">Add to Cart</string>
@@ -186,6 +186,8 @@
     <string name="adminMaintainProductET3">Item Description</string>
     <string name="adminMaintainProductBTN1">Apply Changes</string>
     <string name="addprom">+promocode</string>
+    <string name="rs">Rs.</string>
+    <string name="zero">.00</string>
 
 
 </resources>
