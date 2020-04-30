@@ -48,6 +48,9 @@ public class ItemUpdate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 applyChanges();
+                Intent i = new Intent(ItemUpdate.this, ItemUpdateDelete.class);
+                startActivity(i);
+
             }
         });
     }
