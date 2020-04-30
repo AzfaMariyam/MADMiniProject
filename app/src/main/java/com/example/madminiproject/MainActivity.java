@@ -17,21 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         b4 = findViewById(R.id.button4);
-        b4.setOnClickListener((new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openItemDisplay();
+
+                Intent i = new Intent(MainActivity.this, itemDisplay.class);
+                startActivity(i);
             }
-        }));
+        });
+
     }
-
-
-    public void openItemDisplay(){
-
-        Intent i1 = new Intent(this, itemDisplay.class);
-
-        startActivity(i1);
-    }
-
-
 }
