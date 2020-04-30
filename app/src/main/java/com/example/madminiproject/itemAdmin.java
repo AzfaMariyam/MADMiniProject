@@ -54,7 +54,7 @@ public class itemAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(itemAdmin.this, itemAdmin.class);
+                Intent i = new Intent(itemAdmin.this, AdminPanel.class);
                 startActivity(i);
             }
         });
