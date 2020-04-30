@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/h" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/cartbtn"
         android:layout_width="50dp"
         android:layout_height="44dp"
         android:adjustViewBounds="true"

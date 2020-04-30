@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,8 @@ public class ItemDetails extends AppCompatActivity {
     private Button addCartbtn;
     DatabaseReference cartListRef;
     ElegantNumberButton numberButton;
+    private ImageButton cartbtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,16 @@ public class ItemDetails extends AppCompatActivity {
         itemDescription = (TextView) findViewById(R.id.textView8);
         addCartbtn = (Button) findViewById(R.id.addCartbtn);
         numberButton = (ElegantNumberButton) findViewById(R.id.newEleg);
+        cartbtn = (ImageButton) findViewById(R.id.cartbtn) ;
         getItemDetails(itemId);
+
+        cartbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ItemDetails.this, ShopingCart.class);
+                startActivity(intent);
+            }
+        });
 
 
         addCartbtn.setOnClickListener(new View.OnClickListener() {

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rmbackground"
+    android:background="@drawable/ru"
     tools:context=".OrderSummary">
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/shipment"
         android:layout_width="178dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:background="#39B630"
+        android:background="#38E87F"
         android:text="@string/pur"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.711" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/backto"
         android:layout_width="178dp"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/third"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,34 +108,21 @@
         app:layout_constraintVertical_bias="0.03"
         app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
 
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="169dp"
-        android:layout_height="54dp"
+    <TextView
+        android:id="@+id/gtotal"
+        android:layout_width="324dp"
+        android:layout_height="82dp"
+        android:background="@android:color/background_light"
+        android:gravity="center"
         android:ems="10"
         android:inputType="number"
-
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.793"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintVertical_bias="0.419" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/gtotal"
-        android:textColor="@android:color/background_dark"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37" />
 </androidx.constraintlayout.widget.ConstraintLayout>
